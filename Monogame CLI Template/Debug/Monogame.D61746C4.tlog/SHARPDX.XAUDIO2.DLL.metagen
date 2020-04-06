@@ -1,0 +1,1216 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly SharpDX.XAudio2, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly SharpDX, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1: 
+	hash=None, flags=None
+Struct SharpDX.XAPO.BufferFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAPO.BufferFlags Silent = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.BufferFlags Valid = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.BufferFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAPO.PropertyFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAPO.PropertyFlags ChannelsMustMatch = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.PropertyFlags FrameRateMustMatch = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.PropertyFlags BitspersampleMustMatch = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.PropertyFlags BufferCountMustMatch = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.PropertyFlags InplaceRequired = 32 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.PropertyFlags InplaceSupported = 16 : Public, Static, Literal, HasDefault
+    SharpDX.XAPO.PropertyFlags Default = 31 : Public, Static, Literal, HasDefault
+Interface SharpDX.XAPO.AudioProcessor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    SharpDX.ICallbackable
+    System.IDisposable
+    SharpDX.XAPO.AudioProcessor27
+  Properties:
+    SharpDX.XAPO.RegistrationProperties RegistrationProperties 'get ' : 
+  Methods:
+    get_RegistrationProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    IsInputFormatSupported(WaveFormat, WaveFormat, WaveFormat&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsOutputFormatSupported(WaveFormat, WaveFormat, WaveFormat&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Initialize(DataStream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LockForProcess(LockParameters[], LockParameters[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UnlockForProcess(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Process(BufferParameters[], BufferParameters[], Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CalcInputFrames(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CalcOutputFrames(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class SharpDX.XAPO.AudioProcessorNative: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObjectCallback
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    SharpDX.XAPO.AudioProcessor
+    SharpDX.XAPO.AudioProcessor27
+  Properties:
+    SharpDX.XAPO.RegistrationProperties RegistrationProperties 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetRegistrationProperties_(RegistrationProperties&(Out)): PrivateScope, Assembly, HideBySig
+    IsInputFormatSupported_(WaveFormat&, WaveFormat&, WaveFormat&(Out)): PrivateScope, Assembly, HideBySig
+    IsOutputFormatSupported_(WaveFormat&, WaveFormat&, WaveFormat&(Out)): PrivateScope, Assembly, HideBySig
+    Initialize_(IntPtr, Int32): PrivateScope, Assembly, HideBySig
+    Reset_(): PrivateScope, Assembly, HideBySig
+    LockForProcess_(Int32, LockParameters[], Int32, LockParameters[]): PrivateScope, Assembly, HideBySig
+    UnlockForProcess_(): PrivateScope, Assembly, HideBySig
+    Process_(Int32, BufferParameters[], Int32, BufferParameters[], RawBool): PrivateScope, Assembly, HideBySig
+    CalcInputFrames_(Int32): PrivateScope, Assembly, HideBySig
+    CalcOutputFrames_(Int32): PrivateScope, Assembly, HideBySig
+    get_RegistrationProperties(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IsInputFormatSupported(WaveFormat, WaveFormat, WaveFormat&(Out)): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IsOutputFormatSupported(WaveFormat, WaveFormat, WaveFormat&(Out)): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Initialize(DataStream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Reset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LockForProcess(LockParameters[], LockParameters[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    UnlockForProcess(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Process(BufferParameters[], BufferParameters[], Boolean): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CalcInputFrames(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CalcOutputFrames(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Interface SharpDX.XAPO.ParameterProvider: AutoLayout, AnsiClass, Class, ClassSemanticsMask, Abstract
+  Interfaces:
+    SharpDX.ICallbackable
+    System.IDisposable
+    SharpDX.XAPO.ParameterProvider27
+  Methods:
+    SetParameters(DataStream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetParameters(DataStream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class SharpDX.XAPO.ParameterProviderNative: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :SharpDX.ComObjectCallback
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    SharpDX.XAPO.ParameterProvider
+    SharpDX.XAPO.ParameterProvider27
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    SetParameters_(IntPtr, Int32): PrivateScope, Assembly, HideBySig
+    GetParameters_(IntPtr, Int32): PrivateScope, Assembly, HideBySig
+    SetParameters(DataStream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetParameters(DataStream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct SharpDX.XAPO.BufferParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr Buffer : Public
+    SharpDX.XAPO.BufferFlags BufferFlags : Public
+    Int32 ValidFrameCount : Public
+Struct SharpDX.XAPO.LockParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr FormatPointer : Assembly
+    Int32 MaxFrameCount : Public
+  Properties:
+    SharpDX.Multimedia.WaveFormat Format 'get set' : 
+  Methods:
+    get_Format(): PrivateScope, Public, HideBySig, SpecialName
+    set_Format(WaveFormat): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native*): PrivateScope, Assembly, HideBySig
+Struct SharpDX.XAPO.LockParameters+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr FormatPointer : Public
+    Int32 MaxFrameCount : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.XAPO.RegistrationProperties: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.Guid Clsid : Public
+    System.String FriendlyName : Public
+    System.String CopyrightInfo : Public
+    Int32 MajorVersion : Public
+    Int32 MinorVersion : Public
+    SharpDX.XAPO.PropertyFlags Flags : Public
+    Int32 MinInputBufferCount : Public
+    Int32 MaxInputBufferCount : Public
+    Int32 MinOutputBufferCount : Public
+    Int32 MaxOutputBufferCount : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.XAPO.RegistrationProperties+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.Guid Clsid : Public
+    Char FriendlyName : Public
+    Char CopyrightInfo : Public
+    Int32 MajorVersion : Public
+    Int32 MinorVersion : Public
+    SharpDX.XAPO.PropertyFlags Flags : Public
+    Int32 MinInputBufferCount : Public
+    Int32 MaxInputBufferCount : Public
+    Int32 MinOutputBufferCount : Public
+    Int32 MaxOutputBufferCount : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Interface SharpDX.XAPO.AudioProcessor27: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+Class SharpDX.XAPO.AudioProcessorBase`1[T]: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Type parameter: T, System.ValueType,  NotNullableValueType DefaultConstructor
+  :SharpDX.CallbackBase
+  Interfaces:
+    SharpDX.XAPO.AudioProcessor
+    SharpDX.XAPO.AudioProcessor27
+    SharpDX.XAPO.ParameterProvider
+    SharpDX.XAPO.ParameterProvider27
+  Properties:
+    T Parameters 'get set' : 
+    SharpDX.XAPO.RegistrationProperties RegistrationProperties 'get set' : 
+  Methods:
+    get_Parameters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Parameters(T): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_RegistrationProperties(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IsInputFormatSupported(WaveFormat, WaveFormat, WaveFormat&(Out)): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IsOutputFormatSupported(WaveFormat, WaveFormat, WaveFormat&(Out)): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Initialize(DataStream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Reset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LockForProcess(LockParameters[], LockParameters[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    UnlockForProcess(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Process(BufferParameters[], BufferParameters[], Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CalcInputFrames(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CalcOutputFrames(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class SharpDX.XAPO.AudioProcessorParamNative`1[T]: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Type parameter: T, System.ValueType,  NotNullableValueType DefaultConstructor
+  :SharpDX.XAPO.AudioProcessorNative
+  Properties:
+    T Parameter 'get set' : 
+  Methods:
+    get_Parameter(): PrivateScope, Public, HideBySig, SpecialName
+    set_Parameter(T): PrivateScope, Public, HideBySig, SpecialName
+Class SharpDX.XAPO.AudioProcessorShadow: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :SharpDX.ComObjectShadow
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToIntPtr(AudioProcessor): PrivateScope, Public, Static, HideBySig
+Class SharpDX.XAPO.AudioProcessorShadow+AudioProcessorVtbl: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :SharpDX.ComObjectShadow+ComObjectVtbl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Interface SharpDX.XAPO.ParameterProvider27: AutoLayout, AnsiClass, Class, ClassSemanticsMask, Abstract
+Class SharpDX.XAPO.ParameterProviderShadow: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :SharpDX.ComObjectShadow
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToIntPtr(ParameterProvider): PrivateScope, Public, Static, HideBySig
+Class SharpDX.XAPO.ParameterProviderShadow+ParameterProviderVtbl: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :SharpDX.ComObjectShadow+ComObjectVtbl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SharpDX.XAPO.Fx.Echo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAPO.AudioProcessorParamNative`1[SharpDX.XAPO.Fx.EchoParameters]
+    Void .ctor(SharpDX.XAudio2.XAudio2): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single MinimumWetdrymix = 0 : Public, Static, Literal, HasDefault
+    Single MaximumWetdrymix = 1 : Public, Static, Literal, HasDefault
+    Single DefaultWetdrymix = 0.5 : Public, Static, Literal, HasDefault
+    Single MinimumFeedback = 0 : Public, Static, Literal, HasDefault
+    Single MaximumFeedback = 1 : Public, Static, Literal, HasDefault
+    Single DefaultFeedback = 0.5 : Public, Static, Literal, HasDefault
+    Single MinimumDelay = 1 : Public, Static, Literal, HasDefault
+    Single MaximumDelay = 2000 : Public, Static, Literal, HasDefault
+    Single DefaultDelay = 500 : Public, Static, Literal, HasDefault
+Class SharpDX.XAPO.Fx.Equalizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAPO.AudioProcessorParamNative`1[SharpDX.XAPO.Fx.EqualizerParameters]
+    Void .ctor(SharpDX.XAudio2.XAudio2): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single MinimumFrameRate = 22000 : Public, Static, Literal, HasDefault
+    Single MaximumFrameRate = 48000 : Public, Static, Literal, HasDefault
+    Single MinimumFrequencyCenter = 20 : Public, Static, Literal, HasDefault
+    Single MaximumFrequencyCenter = 20000 : Public, Static, Literal, HasDefault
+    Single DefaultFrequencyCenter0 = 100 : Public, Static, Literal, HasDefault
+    Single DefaultFrequencyCenter1 = 800 : Public, Static, Literal, HasDefault
+    Single DefaultFrequencyCenter2 = 2000 : Public, Static, Literal, HasDefault
+    Single DefaultFrequencyCenter3 = 10000 : Public, Static, Literal, HasDefault
+    Single MinimumGain = 0.126 : Public, Static, Literal, HasDefault
+    Single MaximumGain = 7.94 : Public, Static, Literal, HasDefault
+    Single DefaultGain = 1 : Public, Static, Literal, HasDefault
+    Single MinimumBandwidth = 0.1 : Public, Static, Literal, HasDefault
+    Single MaximumBandwidth = 2 : Public, Static, Literal, HasDefault
+    Single DefaultBandwidth = 1 : Public, Static, Literal, HasDefault
+Class SharpDX.XAPO.Fx.MasteringLimiter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAPO.AudioProcessorParamNative`1[SharpDX.XAPO.Fx.MasteringLimiterParameters]
+    Void .ctor(SharpDX.XAudio2.XAudio2): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 MinimumRelease = 1 : Public, Static, Literal, HasDefault
+    Int32 MaximumRelease = 20 : Public, Static, Literal, HasDefault
+    Int32 DefaultRelease = 6 : Public, Static, Literal, HasDefault
+    Int32 MinimumLoudness = 1 : Public, Static, Literal, HasDefault
+    Int32 MaximumLoudness = 1800 : Public, Static, Literal, HasDefault
+    Int32 DefaultLoudness = 1000 : Public, Static, Literal, HasDefault
+Class SharpDX.XAPO.Fx.Reverb: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAPO.AudioProcessorParamNative`1[SharpDX.XAPO.Fx.ReverbParameters]
+    Void .ctor(SharpDX.XAudio2.XAudio2): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single MinimumDiffusion = 0 : Public, Static, Literal, HasDefault
+    Single MaximumDiffusion = 1 : Public, Static, Literal, HasDefault
+    Single DefaultDiffusion = 0.9 : Public, Static, Literal, HasDefault
+    Single MinimumRoomsize = 0.0001 : Public, Static, Literal, HasDefault
+    Single MaximumRoomsize = 1 : Public, Static, Literal, HasDefault
+    Single DefaultRoomsize = 0.6 : Public, Static, Literal, HasDefault
+Class SharpDX.XAPO.Fx.XAPOFx: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.Guid CLSID_FXEcho : Assembly, Static
+    System.Guid CLSID_FXEQ : Assembly, Static
+    System.Guid CLSID_FXMasteringLimiter : Assembly, Static
+    System.Guid CLSID_FXReverb : Assembly, Static
+  Methods:
+    CreateFX(XAudio2, Guid, ComObject): PrivateScope, Public, Static, HideBySig
+    CreateFX28(Guid, ComObject, IntPtr, Int32): PrivateScope, Public, Static, HideBySig
+Struct SharpDX.XAPO.Fx.EchoInitdata: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single MaxDelay : Public
+Struct SharpDX.XAPO.Fx.EchoParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single WetDryMix : Public
+    Single Feedback : Public
+    Single Delay : Public
+Struct SharpDX.XAPO.Fx.EqualizerParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single FrequencyCenter0 : Public
+    Single Gain0 : Public
+    Single Bandwidth0 : Public
+    Single FrequencyCenter1 : Public
+    Single Gain1 : Public
+    Single Bandwidth1 : Public
+    Single FrequencyCenter2 : Public
+    Single Gain2 : Public
+    Single Bandwidth2 : Public
+    Single FrequencyCenter3 : Public
+    Single Gain3 : Public
+    Single Bandwidth3 : Public
+Struct SharpDX.XAPO.Fx.MasteringLimiterParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 Release : Public
+    Int32 Loudness : Public
+Struct SharpDX.XAPO.Fx.ReverbParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single Diffusion : Public
+    Single RoomSize : Public
+Struct SharpDX.X3DAudio.CalculateFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.X3DAudio.CalculateFlags Matrix = 1 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags Delay = 2 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags LpfDirect = 4 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags LpfReverb = 8 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags Reverb = 16 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags Doppler = 32 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags EmitterAngle = 64 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags ZeroCenter = 65536 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.CalculateFlags RedirectToLfe = 131072 : Public, Static, Literal, HasDefault
+Class SharpDX.X3DAudio.X3DAudio: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(SharpDX.Multimedia.Speakers): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.Multimedia.Speakers, SharpDX.X3DAudio.X3DAudioVersion): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.Multimedia.Speakers, Single, SharpDX.X3DAudio.X3DAudioVersion): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single SpeedOfSound = 343.5 : Public, Static, Literal, HasDefault
+  Properties:
+    SharpDX.X3DAudio.X3DAudioVersion Version 'get ' : 
+  Methods:
+    get_Version(): PrivateScope, Public, HideBySig, SpecialName
+    Calculate(Listener, Emitter, CalculateFlags, Int32, Int32): PrivateScope, Public, HideBySig
+    Calculate(Listener, Emitter, CalculateFlags, DspSettings): PrivateScope, Public, HideBySig
+Class SharpDX.X3DAudio.Cone: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single InnerAngle : Public
+    Single OuterAngle : Public
+    Single InnerVolume : Public
+    Single OuterVolume : Public
+    Single InnerLpf : Public
+    Single OuterLpf : Public
+    Single InnerReverb : Public
+    Single OuterReverb : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.X3DAudio.Cone+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single InnerAngle : Public
+    Single OuterAngle : Public
+    Single InnerVolume : Public
+    Single OuterVolume : Public
+    Single InnerLpf : Public
+    Single OuterLpf : Public
+    Single InnerReverb : Public
+    Single OuterReverb : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.X3DAudio.CurvePoint: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single Distance : Public
+    Single DspSetting : Public
+Struct SharpDX.X3DAudio.DistanceCurve: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr PointsPointer : Assembly
+    Int32 PointCount : Public
+  Methods:
+    FromCurvePoints(CurvePoint[]): PrivateScope, Public, Static, HideBySig
+Class SharpDX.X3DAudio.DspSettings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    IntPtr MatrixCoefficientsPointer : Assembly
+    IntPtr DelayTimesPointer : Assembly
+    Int32 SourceChannelCount : Public, InitOnly
+    Int32 DestinationChannelCount : Public, InitOnly
+    Single LpfDirectCoefficient : Public
+    Single LpfReverbCoefficient : Public
+    Single ReverbLevel : Public
+    Single DopplerFactor : Public
+    Single EmitterToListenerAngle : Public
+    Single EmitterToListenerDistance : Public
+    Single EmitterVelocityComponent : Public
+    Single ListenerVelocityComponent : Public
+    Single[] MatrixCoefficients : Public, InitOnly
+    Single[] DelayTimes : Public, InitOnly
+  Methods:
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.X3DAudio.DspSettings+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr MatrixCoefficientsPointer : Public
+    IntPtr DelayTimesPointer : Public
+    Int32 SrcChannelCount : Public
+    Int32 DstChannelCount : Public
+    Single LPFDirectCoefficient : Public
+    Single LPFReverbCoefficient : Public
+    Single ReverbLevel : Public
+    Single DopplerFactor : Public
+    Single EmitterToListenerAngle : Public
+    Single EmitterToListenerDistance : Public
+    Single EmitterVelocityComponent : Public
+    Single ListenerVelocityComponent : Public
+Class SharpDX.X3DAudio.Emitter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    IntPtr ConePointer : Assembly
+    SharpDX.Mathematics.Interop.RawVector3 OrientFront : Public
+    SharpDX.Mathematics.Interop.RawVector3 OrientTop : Public
+    SharpDX.Mathematics.Interop.RawVector3 Position : Public
+    SharpDX.Mathematics.Interop.RawVector3 Velocity : Public
+    Single InnerRadius : Public
+    Single InnerRadiusAngle : Public
+    Int32 ChannelCount : Public
+    Single ChannelRadius : Public
+    IntPtr ChannelAzimuthsPointer : Assembly
+    IntPtr VolumeCurvePointer : Assembly
+    IntPtr LFECurvePointer : Assembly
+    IntPtr LPFDirectCurvePointer : Assembly
+    IntPtr LPFReverbCurvePointer : Assembly
+    IntPtr ReverbCurvePointer : Assembly
+    Single CurveDistanceScaler : Public
+    Single DopplerScaler : Public
+    SharpDX.X3DAudio.Cone Cone : Public
+    Single[] ChannelAzimuths : Public
+    SharpDX.X3DAudio.CurvePoint[] VolumeCurve : Public
+    SharpDX.X3DAudio.CurvePoint[] LfeCurve : Public
+    SharpDX.X3DAudio.CurvePoint[] LpfDirectCurve : Public
+    SharpDX.X3DAudio.CurvePoint[] LpfReverbCurve : Public
+    SharpDX.X3DAudio.CurvePoint[] ReverbCurve : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.X3DAudio.Emitter+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr ConePointer : Public
+    SharpDX.Mathematics.Interop.RawVector3 OrientFront : Public
+    SharpDX.Mathematics.Interop.RawVector3 OrientTop : Public
+    SharpDX.Mathematics.Interop.RawVector3 Position : Public
+    SharpDX.Mathematics.Interop.RawVector3 Velocity : Public
+    Single InnerRadius : Public
+    Single InnerRadiusAngle : Public
+    Int32 ChannelCount : Public
+    Single ChannelRadius : Public
+    IntPtr ChannelAzimuthsPointer : Public
+    IntPtr VolumeCurvePointer : Public
+    IntPtr LFECurvePointer : Public
+    IntPtr LPFDirectCurvePointer : Public
+    IntPtr LPFReverbCurvePointer : Public
+    IntPtr ReverbCurvePointer : Public
+    Single CurveDistanceScaler : Public
+    Single DopplerScaler : Public
+    __Native Cone : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Class SharpDX.X3DAudio.Listener: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SharpDX.Mathematics.Interop.RawVector3 OrientFront : Public
+    SharpDX.Mathematics.Interop.RawVector3 OrientTop : Public
+    SharpDX.Mathematics.Interop.RawVector3 Position : Public
+    SharpDX.Mathematics.Interop.RawVector3 Velocity : Public
+    IntPtr ConePointer : Assembly
+    SharpDX.X3DAudio.Cone Cone : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.X3DAudio.Listener+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.Mathematics.Interop.RawVector3 OrientFront : Public
+    SharpDX.Mathematics.Interop.RawVector3 OrientTop : Public
+    SharpDX.Mathematics.Interop.RawVector3 Position : Public
+    SharpDX.Mathematics.Interop.RawVector3 Velocity : Public
+    IntPtr ConePointer : Public
+    __Native Cone : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Class SharpDX.X3DAudio.NamespaceDoc: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SharpDX.X3DAudio.X3DAudio17: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    X3DAudioCalculate(X3DAudioHandle&, Listener, Emitter, CalculateFlags, IntPtr): PrivateScope, Public, Static, HideBySig
+    X3DAudioInitialize(Speakers, Single, X3DAudioHandle&(Out)): PrivateScope, Public, Static, HideBySig
+Class SharpDX.X3DAudio.X3DAudio28: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    X3DAudioCalculate(X3DAudioHandle&, Listener, Emitter, CalculateFlags, IntPtr): PrivateScope, Public, Static, HideBySig
+    X3DAudioInitialize(Speakers, Single, X3DAudioHandle&(Out)): PrivateScope, Public, Static, HideBySig
+Struct SharpDX.X3DAudio.X3DAudioHandle: AutoLayout, AnsiClass, Class, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct SharpDX.X3DAudio.X3DAudioVersion: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.X3DAudio.X3DAudioVersion Default = 0 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.X3DAudioVersion Version17 = 1 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.X3DAudioVersion Version28 = 2 : Public, Static, Literal, HasDefault
+    SharpDX.X3DAudio.X3DAudioVersion Version29 = 3 : Public, Static, Literal, HasDefault
+Class SharpDX.XAudio2.AssemblyDoc: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SharpDX.XAudio2.AudioBuffer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DataStream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DataPointer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SharpDX.XAudio2.BufferFlags Flags : Public
+    Int32 AudioBytes : Public
+    IntPtr AudioDataPointer : Public
+    Int32 PlayBegin : Public
+    Int32 PlayLength : Public
+    Int32 LoopBegin : Public
+    Int32 LoopLength : Public
+    Int32 LoopCount : Public
+    IntPtr Context : Public
+    Int32 LoopInfinite = 255 : Public, Static, Literal, HasDefault
+  Properties:
+    SharpDX.DataStream Stream 'get set' : 
+  Methods:
+    get_Stream(): PrivateScope, Public, HideBySig, SpecialName
+    set_Stream(DataStream): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.XAudio2.AudioBuffer+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.XAudio2.BufferFlags Flags : Public
+    Int32 AudioBytes : Public
+    IntPtr AudioDataPointer : Public
+    Int32 PlayBegin : Public
+    Int32 PlayLength : Public
+    Int32 LoopBegin : Public
+    Int32 LoopLength : Public
+    Int32 LoopCount : Public
+    IntPtr Context : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.XAudio2.DeviceRole: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.DeviceRole NotDefaultDevice = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.DeviceRole DefaultConsoleDevice = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.DeviceRole DefaultMultimediaDevice = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.DeviceRole DefaultCommunicationsDevice = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.DeviceRole DefaultGameDevice = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.DeviceRole GlobalDefaultDevice = 15 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.DeviceRole InvalidDeviceRole = -16 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.DeviceDetails: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String DeviceID : Public
+    System.String DisplayName : Public
+    SharpDX.XAudio2.DeviceRole Role : Public
+    SharpDX.Multimedia.WaveFormatExtensible OutputFormat : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.XAudio2.DeviceDetails+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Char DeviceID : Public
+    Char DisplayName : Public
+    SharpDX.XAudio2.DeviceRole Role : Public
+    __Native OutputFormat : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Class SharpDX.XAudio2.EffectDescriptor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(SharpDX.XAPO.AudioProcessor): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAPO.AudioProcessor, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    IntPtr EffectPointer : Assembly
+    SharpDX.Mathematics.Interop.RawBool InitialState : Public
+    Int32 OutputChannelCount : Public
+  Properties:
+    SharpDX.XAPO.AudioProcessor Effect 'get set' : 
+  Methods:
+    get_Effect(): PrivateScope, Public, HideBySig, SpecialName
+    set_Effect(AudioProcessor): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.XAudio2.EffectDescriptor+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr EffectPointer : Public
+    SharpDX.Mathematics.Interop.RawBool InitialState : Public
+    Int32 OutputChannelCount : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Interface SharpDX.XAudio2.EngineCallback: AutoLayout, AnsiClass, Class, ClassSemanticsMask, Abstract
+  Interfaces:
+    SharpDX.ICallbackable
+    System.IDisposable
+  Methods:
+    OnProcessingPassStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnProcessingPassEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnCriticalError(Result): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class SharpDX.XAudio2.EngineShadow: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :SharpDX.CppObjectShadow
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToIntPtr(EngineCallback): PrivateScope, Public, Static, HideBySig
+Class SharpDX.XAudio2.EngineShadow+EngineVtbl: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :SharpDX.CppObjectVtbl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SharpDX.XAudio2.ErrorEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(SharpDX.Result): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.Result ErrorCode 'get set' : 
+  Methods:
+    get_ErrorCode(): PrivateScope, Public, HideBySig, SpecialName
+Struct SharpDX.XAudio2.BufferFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.BufferFlags EndOfStream = 64 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.BufferFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.FilterType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.FilterType LowPassFilter = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.FilterType BandPassFilter = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.FilterType HighPassFilter = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.FilterType NotchFilter = 3 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.FilterType LowPassOnePoleFilter = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.FilterType HighPassOnePoleFilter = 5 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.LogType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.LogType Errors = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType Warnings = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType Information = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType Detail = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType ApiCalls = 16 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType FunctionCalls = 32 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType Timing = 64 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType Locks = 128 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType Memory = 256 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.LogType Streaming = 4096 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.PlayFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.PlayFlags Tails = 32 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.PlayFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.ProcessorSpecifier: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.ProcessorSpecifier Processor1 = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor2 = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor3 = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor4 = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor5 = 16 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor6 = 32 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor7 = 64 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor8 = 128 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor9 = 256 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor10 = 512 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor11 = 1024 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor12 = 2048 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor13 = 4096 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor14 = 8192 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor15 = 16384 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor16 = 32768 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor17 = 65536 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor18 = 131072 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor19 = 262144 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor20 = 524288 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor21 = 1048576 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor22 = 2097152 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor23 = 4194304 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor24 = 8388608 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor25 = 16777216 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor26 = 33554432 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor27 = 67108864 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor28 = 134217728 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor29 = 268435456 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor30 = 536870912 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor31 = 1073741824 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier Processor32 = -2147483648 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier AnyProcessor = -1 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.ProcessorSpecifier DefaultProcessor = 1 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.VoiceFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.VoiceFlags NoPitch = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.VoiceFlags NoSampleRateConversion = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.VoiceFlags UseFilter = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.VoiceFlags Nosamplesplayed = 256 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.VoiceFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.VoiceSendFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.VoiceSendFlags UseFilter = 128 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.VoiceSendFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.XAudio2Flags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.XAudio2Flags DebugEngine = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.XAudio2Flags None = 0 : Public, Static, Literal, HasDefault
+Class SharpDX.XAudio2.ResultCode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SharpDX.ResultDescriptor InvalidCall : Public, Static, InitOnly
+    SharpDX.ResultDescriptor XmaDecoderError : Public, Static, InitOnly
+    SharpDX.ResultDescriptor XapoCreationFailed : Public, Static, InitOnly
+    SharpDX.ResultDescriptor DeviceInvalidated : Public, Static, InitOnly
+Class SharpDX.XAudio2.XAudio2Functions: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+Class SharpDX.XAudio2.MasteringVoice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAudio2.Voice
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Int32, Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 ChannelMask 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetChannelMask(Int32&(Out)): PrivateScope, Public, HideBySig
+    get_ChannelMask(): PrivateScope, Public, HideBySig, SpecialName
+Class SharpDX.XAudio2.SourceVoice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAudio2.Voice
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, SharpDX.XAudio2.VoiceFlags): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, SharpDX.XAudio2.VoiceFlags, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, SharpDX.XAudio2.VoiceFlags, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, SharpDX.XAudio2.VoiceFlags, Single, SharpDX.XAudio2.VoiceCallback): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, SharpDX.XAudio2.VoiceFlags, Single, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, SharpDX.XAudio2.VoiceFlags, Single, SharpDX.XAudio2.VoiceCallback, SharpDX.XAudio2.EffectDescriptor[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, SharpDX.Multimedia.WaveFormat, SharpDX.XAudio2.VoiceFlags, Single, Boolean, SharpDX.XAudio2.EffectDescriptor[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single FrequencyRatio 'get ' : 
+    Int32 SourceSampleRate 'set' : 
+    SharpDX.XAudio2.VoiceState State 'get ' : 
+  Events:
+    System.Action`1[System.Int32] ProcessingPassStart: 
+    VoidAction ProcessingPassEnd: 
+    VoidAction StreamEnd: 
+    System.Action`1[System.IntPtr] BufferStart: 
+    System.Action`1[System.IntPtr] BufferEnd: 
+    System.Action`1[System.IntPtr] LoopEnd: 
+    System.Action`1[SharpDX.XAudio2.SourceVoice+VoiceErrorArgs] VoiceError: 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_FrequencyRatio(): PrivateScope, Public, HideBySig, SpecialName
+    set_SourceSampleRate(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Start(Int32, Int32(Optional, HasDefault)): PrivateScope, Assembly, HideBySig
+    Stop(PlayFlags, Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    SubmitSourceBuffer(AudioBuffer, IntPtr): PrivateScope, Assembly, HideBySig
+    FlushSourceBuffers(): PrivateScope, Public, HideBySig
+    Discontinuity(): PrivateScope, Public, HideBySig
+    ExitLoop(Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetState(Int32): PrivateScope, Assembly, HideBySig
+    SetFrequencyRatio(Single, Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetFrequencyRatio(Single&(Out)): PrivateScope, Assembly, HideBySig
+    SetSourceSampleRate(Int32): PrivateScope, Assembly, HideBySig
+    Start(): PrivateScope, Public, HideBySig
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    SetFrequencyRatio(Single): PrivateScope, Public, HideBySig
+    Start(Int32): PrivateScope, Public, HideBySig
+    Stop(): PrivateScope, Public, HideBySig
+    Stop(Int32): PrivateScope, Public, HideBySig
+    SubmitSourceBuffer(AudioBuffer, UInt32[]): PrivateScope, Public, HideBySig
+    add_ProcessingPassStart(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProcessingPassStart(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    add_ProcessingPassEnd(VoidAction): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProcessingPassEnd(VoidAction): PrivateScope, Public, HideBySig, SpecialName
+    add_StreamEnd(VoidAction): PrivateScope, Public, HideBySig, SpecialName
+    remove_StreamEnd(VoidAction): PrivateScope, Public, HideBySig, SpecialName
+    add_BufferStart(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_BufferStart(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    add_BufferEnd(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_BufferEnd(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    add_LoopEnd(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_LoopEnd(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    add_VoiceError(Action`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_VoiceError(Action`1): PrivateScope, Public, HideBySig, SpecialName
+Class SharpDX.XAudio2.SourceVoice+VoidAction: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct SharpDX.XAudio2.SourceVoice+VoiceErrorArgs: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(IntPtr, SharpDX.Result): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    IntPtr Pointer : Public
+    SharpDX.Result Result : Public
+Class SharpDX.XAudio2.SubmixVoice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAudio2.Voice
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Int32, Int32, SharpDX.XAudio2.SubmixVoiceFlags, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Int32, Int32, SharpDX.XAudio2.SubmixVoiceFlags, Int32, SharpDX.XAudio2.EffectDescriptor[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+Class SharpDX.XAudio2.Voice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.CppObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.XAudio2.VoiceSendDescriptors OutputVoices 'set' : 
+    SharpDX.XAudio2.FilterParameters FilterParameters 'get ' : 
+    Single Volume 'get ' : 
+    SharpDX.XAudio2.VoiceDetails VoiceDetails 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_OutputVoices(VoiceSendDescriptors): PrivateScope, Assembly, HideBySig, SpecialName
+    get_FilterParameters(): PrivateScope, Public, HideBySig, SpecialName
+    get_Volume(): PrivateScope, Public, HideBySig, SpecialName
+    GetVoiceDetails(VoiceDetails&(Out)): PrivateScope, Public, HideBySig
+    SetOutputVoices(Nullable`1): PrivateScope, Assembly, HideBySig
+    SetEffectChain(Nullable`1): PrivateScope, Assembly, HideBySig
+    EnableEffect(Int32, Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    DisableEffect(Int32, Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    IsEffectEnabled(Int32): PrivateScope, Public, HideBySig
+    SetEffectParameters(Int32, IntPtr, Int32, Int32(Optional, HasDefault)): PrivateScope, Assembly, HideBySig
+    GetEffectParameters(Int32, IntPtr, Int32): PrivateScope, Assembly, HideBySig
+    SetFilterParameters(FilterParameters, Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetFilterParameters(FilterParameters&(Out)): PrivateScope, Assembly, HideBySig
+    SetOutputFilterParameters(Voice, FilterParameters, Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetOutputFilterParameters(Voice, FilterParameters&(Out)): PrivateScope, Public, HideBySig
+    SetVolume(Single, Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetVolume(Single&(Out)): PrivateScope, Assembly, HideBySig
+    SetChannelVolumes(Int32, Single[], Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetChannelVolumes(Int32, Single[]): PrivateScope, Public, HideBySig
+    SetOutputMatrix(Voice, Int32, Int32, Single[], Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetOutputMatrix(Voice, Int32, Int32, Single[]): PrivateScope, Public, HideBySig
+    DestroyVoice(): PrivateScope, Public, HideBySig
+    get_VoiceDetails(): PrivateScope, Public, HideBySig, SpecialName
+    EnableEffect(Int32): PrivateScope, Public, HideBySig
+    DisableEffect(Int32): PrivateScope, Public, HideBySig
+    GetEffectParameters(Int32): PrivateScope, Public, HideBySig
+    GetEffectParameters(Int32, Byte[]): PrivateScope, Public, HideBySig
+    SetEffectParameters(Int32, Byte[]): PrivateScope, Public, HideBySig
+    SetEffectParameters(Int32, Byte[], Int32): PrivateScope, Public, HideBySig
+    SetEffectParameters(Int32, T): PrivateScope, Public, HideBySig
+    SetEffectParameters(Int32, T, Int32): PrivateScope, Public, HideBySig
+    SetEffectChain(EffectDescriptor[]): PrivateScope, Public, HideBySig
+    SetOutputVoices(VoiceSendDescriptor[]): PrivateScope, Public, HideBySig
+    SetOutputMatrix(Int32, Int32, Single[]): PrivateScope, Public, HideBySig
+    SetOutputMatrix(Voice, Int32, Int32, Single[]): PrivateScope, Public, HideBySig
+    SetOutputMatrix(Int32, Int32, Single[], Int32): PrivateScope, Public, HideBySig
+Interface SharpDX.XAudio2.VoiceCallback: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    SharpDX.ICallbackable
+    System.IDisposable
+  Methods:
+    OnVoiceProcessingPassStart(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnVoiceProcessingPassEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnStreamEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnBufferStart(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnBufferEnd(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnLoopEnd(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnVoiceError(IntPtr, Result): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class SharpDX.XAudio2.XAudio2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2Version): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2Flags, SharpDX.XAudio2.ProcessorSpecifier, SharpDX.XAudio2.XAudio2Version): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 MaximumBufferBytes = -2147483648 : Public, Static, Literal, HasDefault
+    Int32 MaximumQueuedBuffers = 64 : Public, Static, Literal, HasDefault
+    Int32 MaximumAudioChannels = 64 : Public, Static, Literal, HasDefault
+    Int32 MinimumSampleRate = 1000 : Public, Static, Literal, HasDefault
+    Int32 MaximumSampleRate = 200000 : Public, Static, Literal, HasDefault
+    Single MaximumVolumeLevel = 1.677722E+07 : Public, Static, Literal, HasDefault
+    Single MinimumFrequencyRatio = 0.0009765625 : Public, Static, Literal, HasDefault
+    Single MaximumFrequencyRatio = 1024 : Public, Static, Literal, HasDefault
+    Single DefaultFrequencyRatio = 2 : Public, Static, Literal, HasDefault
+    Single MaximumFilterOneOverQ = 1.5 : Public, Static, Literal, HasDefault
+    Single MaximumFilterFrequency = 1 : Public, Static, Literal, HasDefault
+    Int32 MaximumLoopCount = 254 : Public, Static, Literal, HasDefault
+    Int32 CommitNow = 0 : Public, Static, Literal, HasDefault
+    Int32 CommitAll = 0 : Public, Static, Literal, HasDefault
+    Int32 NoLoopRegion = 0 : Public, Static, Literal, HasDefault
+    Int32 DefaultChannels = 0 : Public, Static, Literal, HasDefault
+    Int32 DefaultSampleRate = 0 : Public, Static, Literal, HasDefault
+  Properties:
+    SharpDX.XAudio2.PerformanceData PerformanceData 'get ' : 
+    SharpDX.XAudio2.XAudio2Version Version 'get set' : 
+    Int32 DeviceCount 'get ' : 
+  Events:
+    System.EventHandler ProcessingPassStart: 
+    System.EventHandler ProcessingPassEnd: 
+    System.EventHandler`1[SharpDX.XAudio2.ErrorEventArgs] CriticalError: 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PerformanceData(): PrivateScope, Public, HideBySig, SpecialName
+    RegisterForCallbacks_(IntPtr): PrivateScope, Assembly, HideBySig
+    UnregisterForCallbacks_(IntPtr): PrivateScope, Assembly, HideBySig
+    CreateSourceVoice_(SourceVoice, IntPtr, VoiceFlags, Single, IntPtr, Nullable`1, Nullable`1): PrivateScope, Assembly, HideBySig
+    CreateSubmixVoice(SubmixVoice, Int32, Int32, Int32, Int32, Nullable`1, Nullable`1): PrivateScope, Assembly, HideBySig
+    CreateMasteringVoice(MasteringVoice, Int32, Int32, Int32, String, Nullable`1, AudioStreamCategory): PrivateScope, Assembly, HideBySig
+    StartEngine(): PrivateScope, Public, HideBySig
+    StopEngine(): PrivateScope, Public, HideBySig
+    CommitChanges(Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    GetPerformanceData(PerformanceData&(Out)): PrivateScope, Assembly, HideBySig
+    SetDebugConfiguration(DebugConfiguration, IntPtr): PrivateScope, Public, HideBySig
+    add_ProcessingPassStart(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProcessingPassStart(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ProcessingPassEnd(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProcessingPassEnd(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_CriticalError(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_CriticalError(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    get_Version(): PrivateScope, Public, HideBySig, SpecialName
+    get_DeviceCount(): PrivateScope, Public, HideBySig, SpecialName
+    CreateMasteringVoice27(MasteringVoice, Int32, Int32, Int32, Int32, Nullable`1): PrivateScope, Assembly, HideBySig
+    GetDeviceDetails(Int32): PrivateScope, Public, HideBySig
+    AmplitudeRatioToDecibels(Single): PrivateScope, Public, Static, HideBySig
+    CutoffFrequencyToRadians(Single, Int32): PrivateScope, Public, Static, HideBySig
+    RadiansToCutoffFrequency(Single, Single): PrivateScope, Public, Static, HideBySig
+    DecibelsToAmplitudeRatio(Single): PrivateScope, Public, Static, HideBySig
+    FrequencyRatioToSemitones(Single): PrivateScope, Public, Static, HideBySig
+    SemitonesToFrequencyRatio(Single): PrivateScope, Public, Static, HideBySig
+    CommitChanges(): PrivateScope, Public, HideBySig
+Struct SharpDX.XAudio2.BufferWma: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr DecodedPacketCumulativeBytesPointer : Public
+    Int32 PacketCount : Public
+Struct SharpDX.XAudio2.DebugConfiguration: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 TraceMask : Public
+    Int32 BreakMask : Public
+    SharpDX.Mathematics.Interop.RawBool LogThreadID : Public
+    SharpDX.Mathematics.Interop.RawBool LogFileline : Public
+    SharpDX.Mathematics.Interop.RawBool LogFunctionName : Public
+    SharpDX.Mathematics.Interop.RawBool LogTiming : Public
+Struct SharpDX.XAudio2.EffectChain: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 EffectCount : Public
+    IntPtr EffectDescriptorPointer : Assembly
+Struct SharpDX.XAudio2.FilterParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.XAudio2.FilterType Type : Public
+    Single Frequency : Public
+    Single OneOverQ : Public
+Struct SharpDX.XAudio2.PerformanceData: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int64 AudioCyclesSinceLastQuery : Public
+    Int64 TotalCyclesSinceLastQuery : Public
+    Int32 MinimumCyclesPerQuantum : Public
+    Int32 MaximumCyclesPerQuantum : Public
+    Int32 MemoryUsageInBytes : Public
+    Int32 CurrentLatencyInSamples : Public
+    Int32 GlitchesSinceEngineStarted : Public
+    Int32 ActiveSourceVoiceCount : Public
+    Int32 TotalSourceVoiceCount : Public
+    Int32 ActiveSubmixVoiceCount : Public
+    Int32 ActiveResamplerCount : Public
+    Int32 ActiveMatrixMixCount : Public
+    Int32 ActiveXmaSourceVoices : Public
+    Int32 ActiveXmaStreams : Public
+Struct SharpDX.XAudio2.VoiceDetails: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.XAudio2.VoiceFlags CreationFlags : Public
+    Int32 ActiveFlags : Public
+    Int32 InputChannelCount : Public
+    Int32 InputSampleRate : Public
+Struct SharpDX.XAudio2.VoiceSendDescriptor: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(SharpDX.XAudio2.Voice): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.VoiceSendFlags, SharpDX.XAudio2.Voice): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SharpDX.XAudio2.VoiceSendFlags Flags : Public
+    IntPtr OutputVoicePointer : Assembly
+  Properties:
+    SharpDX.XAudio2.Voice OutputVoice 'get set' : 
+  Methods:
+    get_OutputVoice(): PrivateScope, Public, HideBySig, SpecialName
+    set_OutputVoice(Voice): PrivateScope, Public, HideBySig, SpecialName
+Struct SharpDX.XAudio2.VoiceSendDescriptors: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 SendCount : Public
+    IntPtr SendPointer : Assembly
+Struct SharpDX.XAudio2.VoiceState: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr Context : Public
+    Int32 BuffersQueued : Public
+    Int64 SamplesPlayed : Public
+Class SharpDX.XAudio2.ModuleInit: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Setup(): PrivateScope, Assembly, Static, HideBySig
+Class SharpDX.XAudio2.NamespaceDoc: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct SharpDX.XAudio2.SubmixVoiceFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.SubmixVoiceFlags UseFilter = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.SubmixVoiceFlags None = 0 : Public, Static, Literal, HasDefault
+Class SharpDX.XAudio2.VoiceShadow: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :SharpDX.CppObjectShadow
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToIntPtr(VoiceCallback): PrivateScope, Public, Static, HideBySig
+Class SharpDX.XAudio2.XAudio28Functions: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    XAudio2Create(XAudio2, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    CreateAudioReverb(ComObject): PrivateScope, Public, Static, HideBySig
+    CreateAudioVolumeMeter(ComObject): PrivateScope, Public, Static, HideBySig
+Struct SharpDX.XAudio2.XAudio2Version: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XAudio2.XAudio2Version Default = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.XAudio2Version Version27 = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.XAudio2Version Version28 = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XAudio2.XAudio2Version Version29 = 3 : Public, Static, Literal, HasDefault
+Class SharpDX.XAudio2.Fx.Reverb: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAPO.AudioProcessorParamNative`1[SharpDX.XAudio2.Fx.ReverbParameters]
+    Void .ctor(SharpDX.XAudio2.XAudio2): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single MinWetDryMix = 0 : Public, Static, Literal, HasDefault
+    Int32 MinReflectionsDelay = 0 : Public, Static, Literal, HasDefault
+    Byte MinReverbDelay = 0 : Public, Static, Literal, HasDefault
+    Byte MinRearDelay = 0 : Public, Static, Literal, HasDefault
+    Byte MinPosition = 0 : Public, Static, Literal, HasDefault
+    Byte MinDiffusion = 0 : Public, Static, Literal, HasDefault
+    Byte MinLowEqGain = 0 : Public, Static, Literal, HasDefault
+    Byte MinLowEqCutoff = 0 : Public, Static, Literal, HasDefault
+    Byte MinHighEqGain = 0 : Public, Static, Literal, HasDefault
+    Byte MinHighEqCutoff = 0 : Public, Static, Literal, HasDefault
+    Single MinRoomFilterFreq = 20 : Public, Static, Literal, HasDefault
+    Single MinRoomFilterMain = -100 : Public, Static, Literal, HasDefault
+    Single MinRoomFilterHf = -100 : Public, Static, Literal, HasDefault
+    Single MinReflectionsGain = -100 : Public, Static, Literal, HasDefault
+    Single MinReverbGain = -100 : Public, Static, Literal, HasDefault
+    Single MinDecayTime = 0.1 : Public, Static, Literal, HasDefault
+    Single MinDensity = 0 : Public, Static, Literal, HasDefault
+    Single MinRoomSize = 0 : Public, Static, Literal, HasDefault
+    Single MaxWetDryMix = 100 : Public, Static, Literal, HasDefault
+    Int32 MaxReflectionsDelay = 300 : Public, Static, Literal, HasDefault
+    Byte MaxReverbDelay = 85 : Public, Static, Literal, HasDefault
+    Byte MaxRearDelay = 5 : Public, Static, Literal, HasDefault
+    Byte MaxPosition = 30 : Public, Static, Literal, HasDefault
+    Byte MaxDiffusion = 15 : Public, Static, Literal, HasDefault
+    Byte MaxLowEqGain = 12 : Public, Static, Literal, HasDefault
+    Byte MaxLowEqCutoff = 9 : Public, Static, Literal, HasDefault
+    Byte MaxHighEqGain = 8 : Public, Static, Literal, HasDefault
+    Byte MaxHighEqCutoff = 14 : Public, Static, Literal, HasDefault
+    Single MaxRoomFilterFreq = 20000 : Public, Static, Literal, HasDefault
+    Single MaxRoomFilterMain = 0 : Public, Static, Literal, HasDefault
+    Single MaxRoomFilterHf = 0 : Public, Static, Literal, HasDefault
+    Single MaxReflectionsGain = 20 : Public, Static, Literal, HasDefault
+    Single MaxReverbGain = 20 : Public, Static, Literal, HasDefault
+    Single MaxDensity = 100 : Public, Static, Literal, HasDefault
+    Single MaxRoomSize = 100 : Public, Static, Literal, HasDefault
+    Single DefaultWetDryMix = 100 : Public, Static, Literal, HasDefault
+    Int32 DefaultReflectionsDelay = 5 : Public, Static, Literal, HasDefault
+    Byte DefaultReverbDelay = 5 : Public, Static, Literal, HasDefault
+    Byte DefaultRearDelay = 5 : Public, Static, Literal, HasDefault
+    Byte DefaultPosition = 6 : Public, Static, Literal, HasDefault
+    Byte DefaultPositionMatrix = 27 : Public, Static, Literal, HasDefault
+    Byte DefaultEarlyDiffusion = 8 : Public, Static, Literal, HasDefault
+    Byte DefaultLateDiffusion = 8 : Public, Static, Literal, HasDefault
+    Byte DefaultLowEqGain = 8 : Public, Static, Literal, HasDefault
+    Byte DefaultLowEqCutoff = 4 : Public, Static, Literal, HasDefault
+    Byte DefaultHighEqGain = 8 : Public, Static, Literal, HasDefault
+    Byte DefaultHighEqCutoff = 4 : Public, Static, Literal, HasDefault
+    Single DefaultRoomFilterFreq = 5000 : Public, Static, Literal, HasDefault
+    Single DefaultRoomFilterMain = 0 : Public, Static, Literal, HasDefault
+    Single DefaultRoomFilterHf = 0 : Public, Static, Literal, HasDefault
+    Single DefaultReflectionsGain = 0 : Public, Static, Literal, HasDefault
+    Single DefaultReverbGain = 0 : Public, Static, Literal, HasDefault
+    Single DefaultDecayTime = 1 : Public, Static, Literal, HasDefault
+    Single DefaultDensity = 100 : Public, Static, Literal, HasDefault
+    Single DefaultRoomSize = 100 : Public, Static, Literal, HasDefault
+Struct SharpDX.XAudio2.Fx.ReverbI3DL2Parameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Single, Int32, Int32, Single, Single, Single, Int32, Single, Int32, Single, Single, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single WetDryMix : Public
+    Int32 Room : Public
+    Int32 RoomHF : Public
+    Single RoomRolloffFactor : Public
+    Single DecayTime : Public
+    Single DecayHFRatio : Public
+    Int32 Reflections : Public
+    Single ReflectionsDelay : Public
+    Int32 Reverb : Public
+    Single ReverbDelay : Public
+    Single Diffusion : Public
+    Single Density : Public
+    Single HFReference : Public
+Struct SharpDX.XAudio2.Fx.ReverbI3DL2Parameters+Presets: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Default 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Generic 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters PaddedCell 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Room 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters BathRoom 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters LivingRoom 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters StoneRoom 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Auditorium 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters ConcertHall 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Cave 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Arena 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Hangar 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters CarpetedHallway 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Hallway 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters StoneCorridor 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Alley 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Forest 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters City 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Mountains 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Quarry 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Plain 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters ParkingLot 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters SewerPipe 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters UnderWater 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters SmallRoom 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters MediumRoom 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters LargeRoom 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters MediumHall 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters LargeHall 'get ' : 
+    SharpDX.XAudio2.Fx.ReverbI3DL2Parameters Plate 'get ' : 
+  Methods:
+    get_Default(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Generic(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PaddedCell(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Room(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_BathRoom(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LivingRoom(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_StoneRoom(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Auditorium(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ConcertHall(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Cave(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Arena(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Hangar(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_CarpetedHallway(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Hallway(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_StoneCorridor(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Alley(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Forest(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_City(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Mountains(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Quarry(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Plain(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ParkingLot(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SewerPipe(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_UnderWater(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SmallRoom(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumRoom(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LargeRoom(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumHall(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LargeHall(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Plate(): PrivateScope, Public, Static, HideBySig, SpecialName
+Struct SharpDX.XAudio2.Fx.ReverbParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single WetDryMix : Public
+    Int32 ReflectionsDelay : Public
+    Byte ReverbDelay : Public
+    Byte RearDelay : Public
+    Byte SideDelay : Public
+    Byte PositionLeft : Public
+    Byte PositionRight : Public
+    Byte PositionMatrixLeft : Public
+    Byte PositionMatrixRight : Public
+    Byte EarlyDiffusion : Public
+    Byte LateDiffusion : Public
+    Byte LowEQGain : Public
+    Byte LowEQCutoff : Public
+    Byte HighEQGain : Public
+    Byte HighEQCutoff : Public
+    Single RoomFilterFreq : Public
+    Single RoomFilterMain : Public
+    Single RoomFilterHF : Public
+    Single ReflectionsGain : Public
+    Single ReverbGain : Public
+    Single DecayTime : Public
+    Single Density : Public
+    Single RoomSize : Public
+    SharpDX.Mathematics.Interop.RawBool DisableLateField : Public
+  Methods:
+    op_Explicit(ReverbI3DL2Parameters): PrivateScope, Public, Static, HideBySig, SpecialName
+Class SharpDX.XAudio2.Fx.VolumeMeter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.XAPO.AudioProcessorParamNative`1[SharpDX.XAudio2.Fx.VolumeMeterLevels]
+    Void .ctor(SharpDX.XAudio2.XAudio2): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.XAudio2.XAudio2, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SharpDX.XAudio2.Fx.XAudio2FxContants: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.Guid CLSID_AudioReverb : Assembly, Static
+    System.Guid CLSID_AudioReverb_Debug : Assembly, Static
+    System.Guid CLSID_AudioVolumeMeter : Assembly, Static
+    System.Guid CLSID_AudioVolumeMeter_Debug : Assembly, Static
+    System.Guid CLSID_IAudioProcessor : Assembly, Static
+Struct SharpDX.XAudio2.Fx.VolumeMeterLevels: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr PeakLevelPointer : Assembly
+    IntPtr RmsLevelsPointer : Assembly
+    Int32 ChannelCount : Public

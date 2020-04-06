@@ -1,0 +1,1020 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly MonoGame.Framework.Net, Version=3.7.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly MonoGame.Framework, Version=3.7.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Lidgren.Network, Version=3.7.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Microsoft.Xna.Framework.GamerServices.AchievementCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IList`1[Microsoft.Xna.Framework.GamerServices.Achievement]
+    System.Collections.Generic.ICollection`1[Microsoft.Xna.Framework.GamerServices.Achievement]
+    System.Collections.Generic.IEnumerable`1[Microsoft.Xna.Framework.GamerServices.Achievement]
+    System.Collections.IEnumerable
+    System.IDisposable
+  Properties:
+    Int32 Count 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.Achievement Item [Int32] 'get set' : 
+    Boolean IsReadOnly 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(Int32, Achievement): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsReadOnly(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Add(Achievement): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clear(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Contains(Achievement): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CopyTo(Achievement[], Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IndexOf(Achievement): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Insert(Int32, Achievement): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Remove(Achievement): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    RemoveAt(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.GamerServices.Achievement: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Description 'get set' : 
+    Boolean DisplayBeforeEarned 'get set' : 
+    System.DateTime EarnedDateTime 'get set' : 
+    Boolean EarnedOnline 'get set' : 
+    Int32 GamerScore 'get set' : 
+    System.String HowToEarn 'get set' : 
+    Boolean IsEarned 'get set' : 
+    System.String Key 'get set' : 
+    System.String Name 'get set' : 
+  Methods:
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    set_Description(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_DisplayBeforeEarned(): PrivateScope, Public, HideBySig, SpecialName
+    set_DisplayBeforeEarned(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_EarnedDateTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_EarnedDateTime(DateTime): PrivateScope, Assembly, HideBySig, SpecialName
+    get_EarnedOnline(): PrivateScope, Public, HideBySig, SpecialName
+    set_EarnedOnline(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_GamerScore(): PrivateScope, Public, HideBySig, SpecialName
+    set_GamerScore(Int32): PrivateScope, Assembly, HideBySig, SpecialName
+    get_HowToEarn(): PrivateScope, Public, HideBySig, SpecialName
+    set_HowToEarn(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsEarned(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsEarned(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Key(): PrivateScope, Public, HideBySig, SpecialName
+    set_Key(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Assembly, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.GamerServices.FriendCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IList`1[Microsoft.Xna.Framework.GamerServices.FriendGamer]
+    System.Collections.Generic.ICollection`1[Microsoft.Xna.Framework.GamerServices.FriendGamer]
+    System.Collections.Generic.IEnumerable`1[Microsoft.Xna.Framework.GamerServices.FriendGamer]
+    System.Collections.IEnumerable
+    System.IDisposable
+  Properties:
+    Int32 Count 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.FriendGamer Item [Int32] 'get set' : 
+    Boolean IsReadOnly 'get set' : 
+  Methods:
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(Int32, FriendGamer): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsReadOnly(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Add(FriendGamer): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clear(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Contains(FriendGamer): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CopyTo(FriendGamer[], Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IndexOf(FriendGamer): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Insert(Int32, FriendGamer): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Remove(FriendGamer): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    RemoveAt(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.GamerServices.Gamer: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Properties:
+    System.String DisplayName 'get set' : 
+    System.String Gamertag 'get set' : 
+    Boolean IsDisposed 'get ' : 
+    System.Object Tag 'get set' : 
+    Microsoft.Xna.Framework.GamerServices.SignedInGamerCollection SignedInGamers 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.LeaderboardWriter LeaderboardWriter 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Dispose(): PrivateScope, Assembly, HideBySig
+    get_DisplayName(): PrivateScope, Public, HideBySig, SpecialName
+    set_DisplayName(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Gamertag(): PrivateScope, Public, HideBySig, SpecialName
+    set_Gamertag(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsDisposed(): PrivateScope, Public, HideBySig, SpecialName
+    get_Tag(): PrivateScope, Public, HideBySig, SpecialName
+    set_Tag(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_SignedInGamers(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LeaderboardWriter(): PrivateScope, Public, HideBySig, SpecialName
+    set_LeaderboardWriter(LeaderboardWriter): PrivateScope, Assembly, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.GamerServices.FriendGamer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Xna.Framework.GamerServices.Gamer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.GamerServices.GamerCollection`1[T]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: T, Microsoft.Xna.Framework.GamerServices.Gamer
+  :System.Collections.ObjectModel.ReadOnlyCollection`1[T]
+    Void .ctor(System.Collections.Generic.List`1[T]): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddGamer(T): PrivateScope, Assembly, HideBySig
+    RemoveGamer(T): PrivateScope, Assembly, HideBySig
+    RemoveGamerAt(Int32): PrivateScope, Assembly, HideBySig
+Class Microsoft.Xna.Framework.GamerServices.GameDefaults: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean AccelerateWithButtons 'get ' : 
+  Methods:
+    get_AccelerateWithButtons(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.GamerServices.GamerPresence: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode PresenceMode 'get set' : 
+    Int32 PresenceValue 'get set' : 
+  Methods:
+    get_PresenceMode(): PrivateScope, Public, HideBySig, SpecialName
+    set_PresenceMode(GamerPresenceMode): PrivateScope, Public, HideBySig, SpecialName
+    get_PresenceValue(): PrivateScope, Public, HideBySig, SpecialName
+    set_PresenceValue(Int32): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Xna.Framework.GamerServices.GamerPresenceMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode ArcadeMode = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode AtMenu = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode BattlingBoss = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode CampaignMode = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode ChallengeMode = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode ConfiguringSettings = 5 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode CoOpLevel = 6 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode CoOpStage = 7 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode CornflowerBlue = 8 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode CustomizingPlayer = 9 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode DifficultyEasy = 10 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode DifficultyExtreme = 11 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode DifficultyHard = 12 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode DifficultyMedium = 13 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode EditingLevel = 14 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode ExplorationMode = 15 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode FoundSecret = 16 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode FreePlay = 17 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode GameOver = 18 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode InCombat = 19 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode InGameStore = 20 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Level = 21 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode LocalCoOp = 22 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode LocalVersus = 23 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode LookingForGames = 24 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Losing = 25 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Multiplayer = 26 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode NearlyFinished = 27 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode None = 28 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode OnARoll = 29 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode OnlineCoOp = 30 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode OnlineVersus = 31 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Outnumbered = 32 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Paused = 33 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode PlayingMinigame = 34 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode PlayingWithFriends = 35 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode PracticeMode = 36 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode PuzzleMode = 37 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode ScenarioMode = 38 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Score = 39 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode ScoreIsTied = 40 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode SettingUpMatch = 41 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode SinglePlayer = 42 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Stage = 43 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode StartingGame = 44 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode StoryMode = 45 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode StuckOnAHardBit = 46 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode SurvivalMode = 47 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode TimeAttack = 48 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode TryingForRecord = 49 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode TutorialMode = 50 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode VersusComputer = 51 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode VersusScore = 52 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode WaitingForPlayers = 53 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode WaitingInLobby = 54 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode WastingTime = 55 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode WatchingCredits = 56 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode WatchingCutscene = 57 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode Winning = 58 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPresenceMode WonTheGame = 59 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.GamerServices.GamerPrivilegeException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.GamerServices.GamerPrivileges: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.GamerServices.GamerPrivilegeSetting AllowCommunication 'get ' : 
+    Boolean AllowOnlineSessions 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.GamerPrivilegeSetting AllowProfileViewing 'get ' : 
+    Boolean AllowPurchaseContent 'get ' : 
+    Boolean AllowTradeContent 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.GamerPrivilegeSetting AllowUserCreatedContent 'get ' : 
+  Methods:
+    get_AllowCommunication(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowOnlineSessions(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowProfileViewing(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowPurchaseContent(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowTradeContent(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowUserCreatedContent(): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Xna.Framework.GamerServices.GamerPrivilegeSetting: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.GamerServices.GamerPrivilegeSetting Blocked = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPrivilegeSetting Everyone = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerPrivilegeSetting FriendsOnly = 2 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.GamerServices.GamerProfile: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct Microsoft.Xna.Framework.GamerServices.GamerZone: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.GamerServices.GamerZone Family = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerZone Pro = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerZone Recreation = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerZone Underground = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.GamerZone Unknown = 4 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.GamerServices.LeaderboardEntry: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int64 Rating 'get set' : 
+    Microsoft.Xna.Framework.GamerServices.PropertyDictionary Columns 'get set' : 
+    Microsoft.Xna.Framework.GamerServices.Gamer Gamer 'get set' : 
+  Methods:
+    get_Rating(): PrivateScope, Public, HideBySig, SpecialName
+    set_Rating(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_Columns(): PrivateScope, Public, HideBySig, SpecialName
+    set_Columns(PropertyDictionary): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Gamer(): PrivateScope, Public, HideBySig, SpecialName
+    set_Gamer(Gamer): PrivateScope, Assembly, HideBySig, SpecialName
+Struct Microsoft.Xna.Framework.GamerServices.LeaderboardIdentity: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    Int32 GameMode 'get set' : 
+    Microsoft.Xna.Framework.GamerServices.LeaderboardKey Key 'get set' : 
+  Methods:
+    get_GameMode(): PrivateScope, Public, HideBySig, SpecialName
+    set_GameMode(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Key(): PrivateScope, Public, HideBySig, SpecialName
+    set_Key(LeaderboardKey): PrivateScope, Public, HideBySig, SpecialName
+    Create(LeaderboardKey): PrivateScope, Public, Static, HideBySig
+    Create(LeaderboardKey, Int32): PrivateScope, Public, Static, HideBySig
+Struct Microsoft.Xna.Framework.GamerServices.LeaderboardKey: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.GamerServices.LeaderboardKey BestScoreLifeTime = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.LeaderboardKey BestScoreRecent = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.LeaderboardKey BestTimeLifeTime = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.LeaderboardKey BestTimeRecent = 3 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.GamerServices.LeaderboardReader: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Boolean CanPageDown 'get set' : 
+    Boolean CanPageUp 'get set' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Xna.Framework.GamerServices.LeaderboardEntry] Entries 'get set' : 
+  Methods:
+    get_CanPageDown(): PrivateScope, Public, HideBySig, SpecialName
+    set_CanPageDown(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CanPageUp(): PrivateScope, Public, HideBySig, SpecialName
+    set_CanPageUp(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Entries(): PrivateScope, Public, HideBySig, SpecialName
+    set_Entries(IEnumerable`1): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.GamerServices.LeaderboardWriter: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+Struct Microsoft.Xna.Framework.GamerServices.MessageBoxIcon: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.GamerServices.MessageBoxIcon Alert = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.MessageBoxIcon Error = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.MessageBoxIcon None = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.GamerServices.MessageBoxIcon Warning = 3 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.GamerServices.PropertyDictionary: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetValueInt32(String): PrivateScope, Public, HideBySig
+    GetValueDateTime(String): PrivateScope, Public, HideBySig
+    SetValue(String, DateTime): PrivateScope, Public, HideBySig
+Class Microsoft.Xna.Framework.GamerServices.SignedInGamerCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.Generic.List`1[Microsoft.Xna.Framework.GamerServices.SignedInGamer]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.GamerServices.SignedInGamer Item [Microsoft.Xna.Framework.PlayerIndex] 'get ' : 
+  Methods:
+    get_Item(PlayerIndex): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.GamerServices.GuideAlreadyVisibleException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.GamerServices.GamerServicesDispatcher: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Properties:
+    Boolean IsInitialized 'get ' : 
+    IntPtr WindowHandle 'get set' : 
+  Events:
+    System.EventHandler`1[System.EventArgs] InstallingTitleUpdate: 
+  Methods:
+    Update(): PrivateScope, Public, Static, HideBySig
+    get_IsInitialized(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_WindowHandle(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_WindowHandle(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    add_InstallingTitleUpdate(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+    remove_InstallingTitleUpdate(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.GamerServices.GamerServicesComponent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Xna.Framework.GameComponent
+    Void .ctor(Microsoft.Xna.Framework.Game): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.Net.LocalNetworkGamer LocalNetworkGamer 'get set' : 
+  Methods:
+    get_LocalNetworkGamer(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    set_LocalNetworkGamer(LocalNetworkGamer): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    Update(GameTime): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Xna.Framework.GamerServices.MonoGameGamerServicesComponent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Xna.Framework.GamerServices.GamerServicesComponent
+    Void .ctor(Microsoft.Xna.Framework.Game): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.Net.AvailableNetworkSessionCollection: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Collections.ObjectModel.ReadOnlyCollection`1[Microsoft.Xna.Framework.Net.AvailableNetworkSession]
+    Void .ctor(System.Collections.Generic.IList`1[Microsoft.Xna.Framework.Net.AvailableNetworkSession]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.Net.AvailableNetworkSession: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 CurrentGamerCount 'get set' : 
+    System.String HostGamertag 'get set' : 
+    Int32 OpenPrivateGamerSlots 'get set' : 
+    Int32 OpenPublicGamerSlots 'get set' : 
+    Microsoft.Xna.Framework.Net.QualityOfService QualityOfService 'get set' : 
+    Microsoft.Xna.Framework.Net.NetworkSessionProperties SessionProperties 'get set' : 
+    System.Net.IPEndPoint EndPoint 'get set' : 
+    System.Net.IPEndPoint InternalEndpont 'get set' : 
+    Microsoft.Xna.Framework.Net.NetworkSessionType SessionType 'get set' : 
+  Methods:
+    get_CurrentGamerCount(): PrivateScope, Public, HideBySig, SpecialName
+    set_CurrentGamerCount(Int32): PrivateScope, Assembly, HideBySig, SpecialName
+    get_HostGamertag(): PrivateScope, Public, HideBySig, SpecialName
+    set_HostGamertag(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_OpenPrivateGamerSlots(): PrivateScope, Public, HideBySig, SpecialName
+    set_OpenPrivateGamerSlots(Int32): PrivateScope, Assembly, HideBySig, SpecialName
+    get_OpenPublicGamerSlots(): PrivateScope, Public, HideBySig, SpecialName
+    set_OpenPublicGamerSlots(Int32): PrivateScope, Assembly, HideBySig, SpecialName
+    get_QualityOfService(): PrivateScope, Public, HideBySig, SpecialName
+    set_QualityOfService(QualityOfService): PrivateScope, Assembly, HideBySig, SpecialName
+    get_SessionProperties(): PrivateScope, Public, HideBySig, SpecialName
+    set_SessionProperties(NetworkSessionProperties): PrivateScope, Assembly, HideBySig, SpecialName
+    get_EndPoint(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_EndPoint(IPEndPoint): PrivateScope, Assembly, HideBySig, SpecialName
+    get_InternalEndpont(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_InternalEndpont(IPEndPoint): PrivateScope, Assembly, HideBySig, SpecialName
+    get_SessionType(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_SessionType(NetworkSessionType): PrivateScope, Assembly, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.CommandEvent: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(Microsoft.Xna.Framework.Net.CommandEventType, System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Xna.Framework.Net.ICommand): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+    System.Object CommandObject 'get ' : 
+  Methods:
+    get_Command(): PrivateScope, Public, HideBySig, SpecialName
+    get_CommandObject(): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Xna.Framework.Net.CommandEventType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.CommandEventType GamerJoined = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.CommandEventType GamerLeft = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.CommandEventType SessionStateChange = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.CommandEventType SendData = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.CommandEventType ReceiveData = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.CommandEventType GamerStateChange = 5 : Public, Static, Literal, HasDefault
+Interface Microsoft.Xna.Framework.Net.ICommand: AutoLayout, AnsiClass, Class, ClassSemanticsMask, Abstract
+  Properties:
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+  Methods:
+    get_Command(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class Microsoft.Xna.Framework.Net.CommandGamerJoined: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(Int32, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Xna.Framework.Net.ICommand
+  Fields:
+    Int64 remoteUniqueIdentifier : Assembly
+  Properties:
+    System.String DisplayName 'get set' : 
+    System.String GamerTag 'get set' : 
+    Microsoft.Xna.Framework.Net.GamerStates State 'get set' : 
+    Int32 InternalIndex 'get ' : 
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+  Methods:
+    get_DisplayName(): PrivateScope, Public, HideBySig, SpecialName
+    set_DisplayName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_GamerTag(): PrivateScope, Public, HideBySig, SpecialName
+    set_GamerTag(String): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    set_State(GamerStates): PrivateScope, Public, HideBySig, SpecialName
+    get_InternalIndex(): PrivateScope, Public, HideBySig, SpecialName
+    get_Command(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Microsoft.Xna.Framework.Net.CommandGamerLeft: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Xna.Framework.Net.ICommand
+  Fields:
+    Int64 remoteUniqueIdentifier : Assembly
+  Properties:
+    Int32 InternalIndex 'get ' : 
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+  Methods:
+    get_InternalIndex(): PrivateScope, Public, HideBySig, SpecialName
+    get_Command(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Microsoft.Xna.Framework.Net.CommandGamerStateChange: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Xna.Framework.Net.ICommand
+  Properties:
+    Microsoft.Xna.Framework.Net.NetworkGamer Gamer 'get ' : 
+    Microsoft.Xna.Framework.Net.GamerStates NewState 'get ' : 
+    Microsoft.Xna.Framework.Net.GamerStates OldState 'get ' : 
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+  Methods:
+    get_Gamer(): PrivateScope, Public, HideBySig, SpecialName
+    get_NewState(): PrivateScope, Public, HideBySig, SpecialName
+    get_OldState(): PrivateScope, Public, HideBySig, SpecialName
+    get_Command(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Microsoft.Xna.Framework.Net.CommandReceiveData: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(Int64, Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Xna.Framework.Net.ICommand
+  Fields:
+    Byte[] data : Assembly
+    Int64 remoteUniqueIdentifier : Assembly
+    Microsoft.Xna.Framework.Net.NetworkGamer gamer : Assembly
+  Properties:
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+  Methods:
+    get_Command(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Microsoft.Xna.Framework.Net.CommandSendData: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(Byte[], Int32, Int32, Microsoft.Xna.Framework.Net.SendDataOptions, Microsoft.Xna.Framework.Net.NetworkGamer, Microsoft.Xna.Framework.Net.LocalNetworkGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Xna.Framework.Net.ICommand
+  Fields:
+    Int32 gamerInternalIndex : Assembly
+    Byte[] data : Assembly
+    Microsoft.Xna.Framework.Net.SendDataOptions options : Assembly
+    Int32 offset : Assembly
+    Int32 count : Assembly
+    Microsoft.Xna.Framework.Net.NetworkGamer gamer : Assembly
+    Microsoft.Xna.Framework.Net.LocalNetworkGamer sender : Assembly
+  Properties:
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+  Methods:
+    get_Command(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Microsoft.Xna.Framework.Net.CommandSessionStateChange: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkSessionState, Microsoft.Xna.Framework.Net.NetworkSessionState): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Xna.Framework.Net.ICommand
+  Properties:
+    Microsoft.Xna.Framework.Net.NetworkSessionState NewState 'get ' : 
+    Microsoft.Xna.Framework.Net.NetworkSessionState OldState 'get ' : 
+    Microsoft.Xna.Framework.Net.CommandEventType Command 'get ' : 
+  Methods:
+    get_NewState(): PrivateScope, Public, HideBySig, SpecialName
+    get_OldState(): PrivateScope, Public, HideBySig, SpecialName
+    get_Command(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Struct Microsoft.Xna.Framework.Net.GamerStates: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.GamerStates Local = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.GamerStates Host = 16 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.GamerStates HasVoice = 256 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.GamerStates Guest = 4096 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.GamerStates MutedByLocalUser = 65536 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.GamerStates PrivateSlot = 1048576 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.GamerStates Ready = 16777216 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.Net.NetworkGamer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Xna.Framework.GamerServices.Gamer
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkSession, Byte, Microsoft.Xna.Framework.Net.GamerStates): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.ComponentModel.INotifyPropertyChanged
+  Properties:
+    Int64 RemoteUniqueIdentifier 'get set' : 
+    Boolean HasLeftSession 'get ' : 
+    Boolean HasVoice 'get ' : 
+    Byte Id    'get ' : 
+    Boolean IsGuest 'get ' : 
+    Boolean IsHost 'get ' : 
+    Boolean IsLocal 'get ' : 
+    Boolean IsMutedByLocalUser 'get ' : 
+    Boolean IsPrivateSlot 'get ' : 
+    Boolean IsReady 'get set' : 
+    Boolean IsTalking 'get ' : 
+    Microsoft.Xna.Framework.Net.NetworkMachine Machine 'get set' : 
+    System.TimeSpan RoundtripTime 'get ' : 
+    Microsoft.Xna.Framework.Net.NetworkSession Session 'get ' : 
+    Microsoft.Xna.Framework.Net.GamerStates State 'get set' : 
+    Microsoft.Xna.Framework.Net.GamerStates OldState 'get ' : 
+  Events:
+    System.ComponentModel.PropertyChangedEventHandler PropertyChanged: 
+  Methods:
+    add_PropertyChanged(PropertyChangedEventHandler): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    remove_PropertyChanged(PropertyChangedEventHandler): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_RemoteUniqueIdentifier(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_RemoteUniqueIdentifier(Int64): PrivateScope, Assembly, HideBySig, SpecialName
+    get_HasLeftSession(): PrivateScope, Public, HideBySig, SpecialName
+    get_HasVoice(): PrivateScope, Public, HideBySig, SpecialName
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsGuest(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsHost(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsLocal(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsMutedByLocalUser(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPrivateSlot(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsReady(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsReady(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsTalking(): PrivateScope, Public, HideBySig, SpecialName
+    get_Machine(): PrivateScope, Public, HideBySig, SpecialName
+    set_Machine(NetworkMachine): PrivateScope, Public, HideBySig, SpecialName
+    get_RoundtripTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_Session(): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_State(GamerStates): PrivateScope, Assembly, HideBySig, SpecialName
+    get_OldState(): PrivateScope, Assembly, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.LocalNetworkGamer: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Microsoft.Xna.Framework.Net.NetworkGamer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkSession, Byte, Microsoft.Xna.Framework.Net.GamerStates): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.Queue`1[Microsoft.Xna.Framework.Net.CommandReceiveData] receivedData : Assembly
+  Properties:
+    Boolean IsDataAvailable 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.SignedInGamer SignedInGamer 'get set' : 
+  Methods:
+    ReceiveData(Byte[], Int32, NetworkGamer&(Out)): PrivateScope, Public, HideBySig
+    ReceiveData(Byte[], NetworkGamer&(Out)): PrivateScope, Public, HideBySig
+    ReceiveData(PacketReader, NetworkGamer&(Out)): PrivateScope, Public, HideBySig
+    SendData(Byte[], Int32, Int32, SendDataOptions): PrivateScope, Public, HideBySig
+    SendData(Byte[], Int32, Int32, SendDataOptions, NetworkGamer): PrivateScope, Public, HideBySig
+    SendData(Byte[], SendDataOptions): PrivateScope, Public, HideBySig
+    SendData(Byte[], SendDataOptions, NetworkGamer): PrivateScope, Public, HideBySig
+    SendData(PacketWriter, SendDataOptions): PrivateScope, Public, HideBySig
+    SendData(PacketWriter, SendDataOptions, NetworkGamer): PrivateScope, Public, HideBySig
+    get_IsDataAvailable(): PrivateScope, Public, HideBySig, SpecialName
+    get_SignedInGamer(): PrivateScope, Public, HideBySig, SpecialName
+    set_SignedInGamer(SignedInGamer): PrivateScope, Assembly, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.MonoGameNetworkConfiguration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Net.IPAddress Broadcast : Public, Static
+Class Microsoft.Xna.Framework.Net.MonoGamerPeer: NotPublic
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkSession, Microsoft.Xna.Framework.Net.AvailableNetworkSession): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String applicationIdentifier : Assembly, Static
+  Properties:
+    System.TimeSpan SimulatedLatency 'get set' : 
+    Single SimulatedPacketLoss 'get set' : 
+    Boolean IsReady 'get ' : 
+  Methods:
+    ShutDown(): PrivateScope, Assembly, HideBySig
+    SendProfile(NetConnection): PrivateScope, Assembly, HideBySig
+    SendProfileRequest(NetConnection): PrivateScope, Assembly, HideBySig
+    SendPeerIntroductions(NetworkGamer): PrivateScope, Assembly, HideBySig
+    SendGamerStateChange(NetworkGamer): PrivateScope, Assembly, HideBySig
+    SendSessionStateChange(): PrivateScope, Assembly, HideBySig
+    ParseIPEndPoint(String): PrivateScope, Public, Static, HideBySig
+    GetMyLocalIpAddress(): PrivateScope, Assembly, Static, HideBySig
+    get_SimulatedLatency(): PrivateScope, Public, HideBySig, SpecialName
+    set_SimulatedLatency(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_SimulatedPacketLoss(): PrivateScope, Public, HideBySig, SpecialName
+    set_SimulatedPacketLoss(Single): PrivateScope, Public, HideBySig, SpecialName
+    DiscoverPeers(): PrivateScope, Assembly, HideBySig
+    SendData(Byte[], SendDataOptions): PrivateScope, Assembly, HideBySig
+    SendData(Byte[], SendDataOptions, NetworkGamer): PrivateScope, Assembly, HideBySig
+    Find(NetworkSessionType): PrivateScope, Assembly, Static, HideBySig
+    RequestNATIntroduction(IPEndPoint, NetPeer): PrivateScope, Public, Static, HideBySig
+    FindResults(List`1): PrivateScope, Assembly, Static, HideBySig
+    UpdateLiveSession(NetworkSession): PrivateScope, Assembly, HideBySig
+    get_IsReady(): PrivateScope, Assembly, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.NetworkException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.Net.NetworkMachine: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.GamerServices.GamerCollection`1[Microsoft.Xna.Framework.Net.NetworkGamer] Gamers 'get ' : 
+  Methods:
+    get_Gamers(): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Xna.Framework.Net.NetworkMessageType: AutoLayout, AnsiClass, Class, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.NetworkMessageType Data = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkMessageType GamerJoined = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkMessageType GamerLeft = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkMessageType Introduction = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkMessageType GamerProfile = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkMessageType RequestGamerProfile = 5 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkMessageType GamerStateChange = 6 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkMessageType SessionStateChange = 7 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.Net.NetworkNotAvailableException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Xna.Framework.Net.NetworkException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.Net.NetworkSessionAsynchronousCreate: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties, Int32, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties, Int32, Boolean, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.Net.NetworkSessionAsynchronousFind: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(NetworkSessionType, Int32, Int32, NetworkSessionProperties): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(NetworkSessionType, Int32, Int32, NetworkSessionProperties, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.Net.NetworkSessionAsynchronousJoin: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(AvailableNetworkSession): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AvailableNetworkSession, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.Net.NetworkSessionAsynchronousJoinInvited: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Xna.Framework.Net.NetworkSession: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.Collections.Generic.Queue`1[Microsoft.Xna.Framework.Net.CommandEvent] commandQueue : Assembly
+    Microsoft.Xna.Framework.Net.MonoGamerPeer networkPeer : Assembly
+    System.Collections.Generic.List`1[Microsoft.Xna.Framework.Net.NetworkSession] activeSessions : Assembly, Static
+  Properties:
+    Microsoft.Xna.Framework.GamerServices.GamerCollection`1[Microsoft.Xna.Framework.Net.NetworkGamer] AllGamers 'get ' : 
+    Boolean AllowHostMigration 'get set' : 
+    Boolean AllowJoinInProgress 'get set' : 
+    Microsoft.Xna.Framework.Net.NetworkGamer Host 'get ' : 
+    Boolean IsDisposed 'get ' : 
+    Boolean IsEveryoneReady 'get ' : 
+    Boolean IsHost 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.GamerCollection`1[Microsoft.Xna.Framework.Net.LocalNetworkGamer] LocalGamers 'get ' : 
+    Int32 MaxGamers 'get set' : 
+    Microsoft.Xna.Framework.GamerServices.GamerCollection`1[Microsoft.Xna.Framework.Net.NetworkGamer] PreviousGamers 'get ' : 
+    Int32 PrivateGamerSlots 'get set' : 
+    Microsoft.Xna.Framework.GamerServices.GamerCollection`1[Microsoft.Xna.Framework.Net.NetworkGamer] RemoteGamers 'get ' : 
+    Microsoft.Xna.Framework.Net.NetworkSessionProperties SessionProperties 'get ' : 
+    Microsoft.Xna.Framework.Net.NetworkSessionState SessionState 'get ' : 
+    Microsoft.Xna.Framework.Net.NetworkSessionType SessionType 'get ' : 
+    System.TimeSpan SimulatedLatency 'get set' : 
+    Single SimulatedPacketLoss 'get set' : 
+  Events:
+    System.EventHandler`1[Microsoft.Xna.Framework.Net.GameEndedEventArgs] GameEnded: 
+    System.EventHandler`1[Microsoft.Xna.Framework.Net.GamerJoinedEventArgs] GamerJoined: 
+    System.EventHandler`1[Microsoft.Xna.Framework.Net.GamerLeftEventArgs] GamerLeft: 
+    System.EventHandler`1[Microsoft.Xna.Framework.Net.GameStartedEventArgs] GameStarted: 
+    System.EventHandler`1[Microsoft.Xna.Framework.Net.HostChangedEventArgs] HostChanged: 
+    System.EventHandler`1[Microsoft.Xna.Framework.Net.InviteAcceptedEventArgs] InviteAccepted: 
+    System.EventHandler`1[Microsoft.Xna.Framework.Net.NetworkSessionEndedEventArgs] SessionEnded: 
+  Methods:
+    Create(NetworkSessionType, IEnumerable`1, Int32, Int32, NetworkSessionProperties): PrivateScope, Public, Static, HideBySig
+    Create(NetworkSessionType, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    Create(NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties): PrivateScope, Public, Static, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Dispose(Boolean): PrivateScope, Public, HideBySig
+    AddLocalGamer(SignedInGamer): PrivateScope, Public, HideBySig
+    BeginCreate(NetworkSessionType, IEnumerable`1, Int32, Int32, NetworkSessionProperties, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    BeginCreate(NetworkSessionType, Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    BeginCreate(NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    GetHostingGamerIndex(IEnumerable`1): PrivateScope, Assembly, Static, HideBySig
+    BeginFind(NetworkSessionType, IEnumerable`1, NetworkSessionProperties, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    BeginFind(NetworkSessionType, Int32, NetworkSessionProperties, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    BeginJoin(AvailableNetworkSession, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    EndCreate(IAsyncResult): PrivateScope, Public, Static, HideBySig
+    EndFind(IAsyncResult): PrivateScope, Public, Static, HideBySig
+    EndGame(): PrivateScope, Public, HideBySig
+    EndJoin(IAsyncResult): PrivateScope, Public, Static, HideBySig
+    Find(NetworkSessionType, IEnumerable`1, NetworkSessionProperties): PrivateScope, Public, Static, HideBySig
+    Find(NetworkSessionType, Int32, NetworkSessionProperties): PrivateScope, Public, Static, HideBySig
+    FindGamerById(Byte): PrivateScope, Public, HideBySig
+    Join(AvailableNetworkSession): PrivateScope, Public, Static, HideBySig
+    ResetReady(): PrivateScope, Public, HideBySig
+    StartGame(): PrivateScope, Public, HideBySig
+    Update(): PrivateScope, Public, HideBySig
+    get_AllGamers(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowHostMigration(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowHostMigration(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowJoinInProgress(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowJoinInProgress(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Host(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDisposed(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsEveryoneReady(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsHost(): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalGamers(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxGamers(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxGamers(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PreviousGamers(): PrivateScope, Public, HideBySig, SpecialName
+    get_PrivateGamerSlots(): PrivateScope, Public, HideBySig, SpecialName
+    set_PrivateGamerSlots(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_RemoteGamers(): PrivateScope, Public, HideBySig, SpecialName
+    get_SessionProperties(): PrivateScope, Public, HideBySig, SpecialName
+    get_SessionState(): PrivateScope, Public, HideBySig, SpecialName
+    get_SessionType(): PrivateScope, Public, HideBySig, SpecialName
+    get_SimulatedLatency(): PrivateScope, Public, HideBySig, SpecialName
+    set_SimulatedLatency(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_SimulatedPacketLoss(): PrivateScope, Public, HideBySig, SpecialName
+    set_SimulatedPacketLoss(Single): PrivateScope, Public, HideBySig, SpecialName
+    add_GameEnded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_GameEnded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_GamerJoined(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_GamerJoined(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_GamerLeft(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_GamerLeft(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_GameStarted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_GameStarted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_HostChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_HostChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_InviteAccepted(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+    remove_InviteAccepted(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+    add_SessionEnded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_SessionEnded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    Exit(): PrivateScope, Assembly, Static, HideBySig
+Class Microsoft.Xna.Framework.Net.GameEndedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.Net.GamerJoinedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.Net.NetworkGamer Gamer 'get ' : 
+  Methods:
+    get_Gamer(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.GamerLeftEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.Net.NetworkGamer Gamer 'get ' : 
+  Methods:
+    get_Gamer(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.GameStartedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.Net.HostChangedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkGamer, Microsoft.Xna.Framework.Net.NetworkGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.Net.NetworkGamer NewHost 'get ' : 
+    Microsoft.Xna.Framework.Net.NetworkGamer OldHost 'get ' : 
+  Methods:
+    get_NewHost(): PrivateScope, Public, HideBySig, SpecialName
+    get_OldHost(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.InviteAcceptedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Xna.Framework.GamerServices.SignedInGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.GamerServices.SignedInGamer Gamer 'get ' : 
+    Boolean IsCurrentSession 'get ' : 
+  Methods:
+    get_Gamer(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsCurrentSession(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.NetworkSessionEndedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Xna.Framework.Net.NetworkSessionEndReason): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.Net.NetworkSessionEndReason EndReason 'get ' : 
+  Methods:
+    get_EndReason(): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Xna.Framework.Net.NetworkSessionEndReason: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.NetworkSessionEndReason ClientSignedOut = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionEndReason HostEndedSession = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionEndReason RemovedByHost = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionEndReason Disconnected = 3 : Public, Static, Literal, HasDefault
+Struct Microsoft.Xna.Framework.Net.NetworkSessionJoinError: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.NetworkSessionJoinError SessionNotFound = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionJoinError SessionNotJoinable = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionJoinError SessionFull = 2 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.Net.NetworkSessionJoinException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Xna.Framework.Net.NetworkException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Microsoft.Xna.Framework.Net.NetworkSessionJoinError): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.Net.NetworkSessionJoinError JoinError 'get set' : 
+  Methods:
+    get_JoinError(): PrivateScope, Public, HideBySig, SpecialName
+    set_JoinError(NetworkSessionJoinError): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.NetworkSessionProperties: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.Generic.List`1[System.Nullable`1[System.Int32]]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    WriteProperties(NetworkSessionProperties, Int32[]): PrivateScope, Public, Static, HideBySig
+    ReadProperties(NetworkSessionProperties, Int32[]): PrivateScope, Public, Static, HideBySig
+Struct Microsoft.Xna.Framework.Net.NetworkSessionState: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.NetworkSessionState Lobby = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionState Playing = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionState Ended = 2 : Public, Static, Literal, HasDefault
+Struct Microsoft.Xna.Framework.Net.NetworkSessionType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.NetworkSessionType Local = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionType SystemLink = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionType PlayerMatch = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.NetworkSessionType Ranked = 3 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.Net.PacketReader: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.BinaryReader
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Data 'get set' : 
+    Int32 Length 'get ' : 
+    Int32 Position 'get set' : 
+  Methods:
+    get_Data(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_Data(Byte[]): PrivateScope, Assembly, HideBySig, SpecialName
+    ReadColor(): PrivateScope, Public, HideBySig
+    ReadDouble(): PrivateScope, Public, Virtual, HideBySig
+    ReadMatrix(): PrivateScope, Public, HideBySig
+    ReadQuaternion(): PrivateScope, Public, HideBySig
+    ReadVector2(): PrivateScope, Public, HideBySig
+    ReadVector3(): PrivateScope, Public, HideBySig
+    ReadVector4(): PrivateScope, Public, HideBySig
+    Reset(Int32): PrivateScope, Assembly, HideBySig
+    get_Length(): PrivateScope, Public, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, HideBySig, SpecialName
+    set_Position(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.Net.PacketWriter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.BinaryWriter
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Data 'get ' : 
+    Int32 Length 'get ' : 
+    Int32 Position 'get set' : 
+  Methods:
+    Write(Color): PrivateScope, Public, HideBySig
+    Write(Double): PrivateScope, Public, Virtual, HideBySig
+    Write(Matrix): PrivateScope, Public, HideBySig
+    Write(Quaternion): PrivateScope, Public, HideBySig
+    Write(Single): PrivateScope, Public, Virtual, HideBySig
+    Write(Vector2): PrivateScope, Public, HideBySig
+    Write(Vector3): PrivateScope, Public, HideBySig
+    Write(Vector4): PrivateScope, Public, HideBySig
+    get_Data(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, HideBySig, SpecialName
+    set_Position(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Reset(): PrivateScope, Assembly, HideBySig
+Class Microsoft.Xna.Framework.Net.QualityOfService: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.TimeSpan AverageRoundtripTime 'get ' : 
+    Int32 BytesPerSecondDownstream 'get ' : 
+    Int32 BytesPerSecondUpstream 'get ' : 
+    Boolean IsAvailable 'get ' : 
+    System.TimeSpan MinimumRoundtripTime 'get ' : 
+  Methods:
+    get_AverageRoundtripTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_BytesPerSecondDownstream(): PrivateScope, Public, HideBySig, SpecialName
+    get_BytesPerSecondUpstream(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsAvailable(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinimumRoundtripTime(): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Xna.Framework.Net.SendDataOptions: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Xna.Framework.Net.SendDataOptions None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.SendDataOptions Reliable = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.SendDataOptions InOrder = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.SendDataOptions ReliableInOrder = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Xna.Framework.Net.SendDataOptions Chat = 4 : Public, Static, Literal, HasDefault
+Class Microsoft.Xna.Framework.GamerServices.Guide: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed
+  Properties:
+    Boolean IsScreenSaverEnabled 'get set' : 
+    Boolean IsTrialMode 'get ' : 
+    Boolean IsVisible 'get set' : 
+    Boolean SimulateTrialMode 'get set' : 
+    Microsoft.Xna.Framework.GameWindow Window 'get set' : 
+  Methods:
+    BeginShowKeyboardInput(PlayerIndex, String, String, String, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    BeginShowKeyboardInput(PlayerIndex, String, String, String, AsyncCallback, Object, Boolean): PrivateScope, Public, Static, HideBySig
+    EndShowKeyboardInput(IAsyncResult): PrivateScope, Public, Static, HideBySig
+    BeginShowMessageBox(PlayerIndex, String, String, IEnumerable`1, Int32, MessageBoxIcon, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    BeginShowMessageBox(String, String, IEnumerable`1, Int32, MessageBoxIcon, AsyncCallback, Object): PrivateScope, Public, Static, HideBySig
+    EndShowMessageBox(IAsyncResult): PrivateScope, Public, Static, HideBySig
+    ShowMarketplace(PlayerIndex): PrivateScope, Public, Static, HideBySig
+    Show(): PrivateScope, Public, Static, HideBySig
+    ShowSignIn(Int32, Boolean): PrivateScope, Public, Static, HideBySig
+    ShowLeaderboard(): PrivateScope, Public, Static, HideBySig
+    ShowAchievements(): PrivateScope, Public, Static, HideBySig
+    get_IsScreenSaverEnabled(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_IsScreenSaverEnabled(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsTrialMode(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsVisible(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SimulateTrialMode(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SimulateTrialMode(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Window(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Window(GameWindow): PrivateScope, Public, Static, HideBySig, SpecialName
+    Initialise(Game): PrivateScope, Assembly, Static, HideBySig
+Class Microsoft.Xna.Framework.GamerServices.MonoGameGamerServicesHelper: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ShowSigninSheet(): PrivateScope, Public, Static, HideBySig
+    Initialise(Game): PrivateScope, Assembly, Static, HideBySig
+Class Microsoft.Xna.Framework.GamerServices.MonoLiveGuide: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Xna.Framework.DrawableGameComponent
+    Void .ctor(Microsoft.Xna.Framework.Game): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Initialize(): PrivateScope, Public, Virtual, HideBySig
+    Draw(GameTime): PrivateScope, Public, Virtual, HideBySig
+    Update(GameTime): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Xna.Framework.GamerServices.SignedInGamer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Xna.Framework.GamerServices.Gamer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Xna.Framework.GamerServices.GameDefaults GameDefaults 'get ' : 
+    Boolean IsGuest 'get ' : 
+    Boolean IsSignedInToLive 'get ' : 
+    Int32 PartySize 'get set' : 
+    Microsoft.Xna.Framework.PlayerIndex PlayerIndex 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.GamerPresence Presence 'get ' : 
+    Microsoft.Xna.Framework.GamerServices.GamerPrivileges Privileges 'get ' : 
+  Events:
+    System.EventHandler`1[Microsoft.Xna.Framework.GamerServices.SignedInEventArgs] SignedIn: 
+    System.EventHandler`1[Microsoft.Xna.Framework.GamerServices.SignedOutEventArgs] SignedOut: 
+  Methods:
+    BeginAuthentication(AsyncCallback, Object): PrivateScope, Public, HideBySig
+    EndAuthentication(IAsyncResult): PrivateScope, Public, HideBySig
+    GetFriends(): PrivateScope, Public, HideBySig
+    IsFriend(Gamer): PrivateScope, Public, HideBySig
+    BeginGetAchievements(AsyncCallback, Object): PrivateScope, Public, HideBySig
+    EndGetAchievements(IAsyncResult): PrivateScope, Public, HideBySig
+    GetAchievements(): PrivateScope, Public, HideBySig
+    BeginAwardAchievement(String, AsyncCallback, Object): PrivateScope, Public, HideBySig
+    BeginAwardAchievement(String, Double, AsyncCallback, Object): PrivateScope, Public, HideBySig
+    EndAwardAchievement(IAsyncResult): PrivateScope, Public, HideBySig
+    AwardAchievement(String): PrivateScope, Public, HideBySig
+    DoAwardAchievement(String, Double): PrivateScope, Public, HideBySig
+    AwardAchievement(String, Double): PrivateScope, Public, HideBySig
+    UpdateScore(String, Int64): PrivateScope, Public, HideBySig
+    ResetAchievements(): PrivateScope, Public, HideBySig
+    get_GameDefaults(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsGuest(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSignedInToLive(): PrivateScope, Public, HideBySig, SpecialName
+    get_PartySize(): PrivateScope, Public, HideBySig, SpecialName
+    set_PartySize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PlayerIndex(): PrivateScope, Public, HideBySig, SpecialName
+    get_Presence(): PrivateScope, Public, HideBySig, SpecialName
+    get_Privileges(): PrivateScope, Public, HideBySig, SpecialName
+    add_SignedIn(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+    remove_SignedIn(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+    add_SignedOut(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+    remove_SignedOut(EventHandler`1): PrivateScope, Public, Static, HideBySig, SpecialName
+Class Microsoft.Xna.Framework.GamerServices.SignedInEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Xna.Framework.GamerServices.SignedInGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Xna.Framework.GamerServices.SignedOutEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Xna.Framework.GamerServices.SignedInGamer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

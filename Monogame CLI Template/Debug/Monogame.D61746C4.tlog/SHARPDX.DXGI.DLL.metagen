@@ -1,0 +1,1647 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly SharpDX.DXGI, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1: 
+	hash=SHA1, flags=PublicKey
+Assembly System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Resources.ResourceManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Runtime.InteropServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly SharpDX, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1: 
+	hash=None, flags=None
+Assembly System.Runtime.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class SharpDX.DXGI.Adapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DXGIObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.Output[] Outputs 'get ' : 
+    SharpDX.DXGI.AdapterDescription Description 'get ' : 
+  Methods:
+    get_Outputs(): PrivateScope, Public, HideBySig, SpecialName
+    IsInterfaceSupported(Type): PrivateScope, Public, HideBySig
+    IsInterfaceSupported(): PrivateScope, Public, HideBySig
+    IsInterfaceSupported(Int64&(Out)): PrivateScope, Public, HideBySig
+    IsInterfaceSupported(Type, Int64&(Out)): PrivateScope, Public, HideBySig
+    GetOutput(Int32): PrivateScope, Public, HideBySig
+    GetOutputCount(): PrivateScope, Public, HideBySig
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    GetOutput(Int32, Output&(Out)): PrivateScope, Assembly, HideBySig
+    GetDescription(AdapterDescription&(Out)): PrivateScope, Assembly, HideBySig
+    CheckInterfaceSupport(Guid, Int64&(Out)): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.AssemblyDoc: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SharpDX.DXGI.Device: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DXGIObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.Adapter Adapter 'get ' : 
+    Int32 GPUThreadPriority 'get set' : 
+  Methods:
+    QueryResourceResidency(ComObject[]): PrivateScope, Public, HideBySig
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Adapter(): PrivateScope, Public, HideBySig, SpecialName
+    get_GPUThreadPriority(): PrivateScope, Public, HideBySig, SpecialName
+    set_GPUThreadPriority(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetAdapter(Adapter&(Out)): PrivateScope, Assembly, HideBySig
+    CreateSurface(SurfaceDescription&, Int32, Int32, Nullable`1, Surface&(Out)): PrivateScope, Assembly, HideBySig
+    QueryResourceResidency(ComObject[], Residency[], Int32): PrivateScope, Assembly, HideBySig
+    QueryResourceResidency(ComArray`1, Residency[], Int32): PrivateScope, Assembly, HideBySig
+    SetGPUThreadPriority(Int32): PrivateScope, Assembly, HideBySig
+    GetGPUThreadPriority(Int32&(Out)): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.DeviceChild: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DXGIObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String DebugName 'get set' : 
+  Methods:
+    GetDevice(): PrivateScope, Public, HideBySig
+    get_DebugName(): PrivateScope, Public, HideBySig, SpecialName
+    set_DebugName(String): PrivateScope, Public, HideBySig, SpecialName
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetDevice(Guid, IntPtr&(Out)): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.DXGIObject: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetParent(): PrivateScope, Public, HideBySig
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    SetPrivateData(Guid, Int32, IntPtr): PrivateScope, Public, HideBySig
+    SetPrivateDataInterface(Guid, ComObject): PrivateScope, Public, HideBySig
+    GetPrivateData(Guid, Int32&, IntPtr): PrivateScope, Public, HideBySig
+    GetParent(Guid, IntPtr&(Out)): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Factory: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DXGIObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.Adapter[] Adapters 'get ' : 
+  Methods:
+    GetAdapter(Int32): PrivateScope, Public, HideBySig
+    get_Adapters(): PrivateScope, Public, HideBySig, SpecialName
+    GetAdapterCount(): PrivateScope, Public, HideBySig
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetAdapter(Int32, Adapter&(Out)): PrivateScope, Assembly, HideBySig
+    MakeWindowAssociation(IntPtr, WindowAssociationFlags): PrivateScope, Public, HideBySig
+    GetWindowAssociation(): PrivateScope, Public, HideBySig
+    CreateSwapChain(ComObject, SwapChainDescription&, SwapChain): PrivateScope, Assembly, HideBySig
+    CreateSoftwareAdapter(IntPtr): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Factory1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Factory
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.Adapter1[] Adapters1 'get ' : 
+    SharpDX.Mathematics.Interop.RawBool IsCurrent 'get ' : 
+  Methods:
+    GetAdapter1(Int32): PrivateScope, Public, HideBySig
+    get_Adapters1(): PrivateScope, Public, HideBySig, SpecialName
+    GetAdapterCount1(): PrivateScope, Public, HideBySig
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsCurrent(): PrivateScope, Public, HideBySig, SpecialName
+    GetAdapter1(Int32, Adapter1&(Out)): PrivateScope, Assembly, HideBySig
+    IsCurrent_(): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Factory2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Factory1
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.Mathematics.Interop.RawBool IsWindowedStereoEnabled 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsWindowedStereoEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    IsWindowedStereoEnabled_(): PrivateScope, Assembly, HideBySig
+    CreateSwapChainForHwnd(ComObject, IntPtr, SwapChainDescription1&, Nullable`1, Output, SwapChain1): PrivateScope, Assembly, HideBySig
+    CreateSwapChainForCoreWindow(ComObject, ComObject, SwapChainDescription1&, Output, SwapChain1): PrivateScope, Assembly, HideBySig
+    GetSharedResourceAdapterLuid(IntPtr, Int64&(Out)): PrivateScope, Public, HideBySig
+    RegisterStereoStatusWindow(IntPtr, Int32, Int32&(Out)): PrivateScope, Public, HideBySig
+    RegisterStereoStatusEvent(IntPtr, Int32&(Out)): PrivateScope, Public, HideBySig
+    UnregisterStereoStatus(Int32): PrivateScope, Public, HideBySig
+    RegisterOcclusionStatusWindow(IntPtr, Int32, Int32&(Out)): PrivateScope, Public, HideBySig
+    RegisterOcclusionStatusEvent(IntPtr, Int32&(Out)): PrivateScope, Public, HideBySig
+    UnregisterOcclusionStatus(Int32): PrivateScope, Public, HideBySig
+    CreateSwapChainForComposition(ComObject, SwapChainDescription1&, Output, SwapChain1): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Factory4: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Factory3
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetWarpAdapter(): PrivateScope, Public, HideBySig
+    GetAdapterByLuid(Int64): PrivateScope, Public, HideBySig
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+Class SharpDX.DXGI.FormatHelper: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed
+  Methods:
+    SizeOfInBytes(Format): PrivateScope, Public, Static, HideBySig
+    SizeOfInBits(Format): PrivateScope, Public, Static, HideBySig
+    IsValid(Format): PrivateScope, Public, Static, HideBySig
+    IsCompressed(Format): PrivateScope, Public, Static, HideBySig
+    IsPacked(Format): PrivateScope, Public, Static, HideBySig
+    IsVideo(Format): PrivateScope, Public, Static, HideBySig
+    IsSRgb(Format): PrivateScope, Public, Static, HideBySig
+    IsTypeless(Format): PrivateScope, Public, Static, HideBySig
+    ComputeScanlineCount(Format, Int32): PrivateScope, Public, Static, HideBySig
+Struct SharpDX.DXGI.AdapterFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.AdapterFlags None = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AdapterFlags Remote = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AdapterFlags Software = 2 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.AdapterFlags3: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.AdapterFlags3 None = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AdapterFlags3 Remote = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AdapterFlags3 Software = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AdapterFlags3 AcgCompatible = 4 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.AlphaMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.AlphaMode Unspecified = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AlphaMode Premultiplied = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AlphaMode Straight = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.AlphaMode Ignore = 3 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.ColorSpaceType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.ColorSpaceType RgbFullG22NoneP709 = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType RgbFullG10NoneP709 = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType RgbStudioG22NoneP709 = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType RgbStudioG22NoneP2020 = 3 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType Reserved = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrFullG22NoneP709X601 = 5 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrStudioG22LeftP601 = 6 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrFullG22LeftP601 = 7 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrStudioG22LeftP709 = 8 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrFullG22LeftP709 = 9 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrStudioG22LeftP2020 = 10 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrFullG22LeftP2020 = 11 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType RgbFullG2084NoneP2020 = 12 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrStudioG2084LeftP2020 = 13 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType RgbStudioG2084NoneP2020 = 14 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrStudioG22TopleftP2020 = 15 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrStudioG2084TopleftP2020 = 16 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType RgbFullG22NoneP2020 = 17 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrStudioGhlgTopleftP2020 = 18 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType YcbcrFullGhlgTopleftP2020 = 19 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ColorSpaceType Custom = -1 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.ComputePreemptionGranularity: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.ComputePreemptionGranularity DmaBufferBoundary = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ComputePreemptionGranularity DispatchBoundary = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ComputePreemptionGranularity ThreadGroupBoundary = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ComputePreemptionGranularity ThreadBoundary = 3 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ComputePreemptionGranularity InstructionBoundary = 4 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.DisplayModeEnumerationFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.DisplayModeEnumerationFlags Interlaced = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeEnumerationFlags Scaling = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeEnumerationFlags Stereo = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeEnumerationFlags DisabledStereo = 8 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.DisplayModeRotation: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.DisplayModeRotation Unspecified = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeRotation Identity = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeRotation Rotate90 = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeRotation Rotate180 = 3 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeRotation Rotate270 = 4 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.DisplayModeScaling: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.DisplayModeScaling Unspecified = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeScaling Centered = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeScaling Stretched = 2 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.DisplayModeScanlineOrder: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.DisplayModeScanlineOrder Unspecified = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeScanlineOrder Progressive = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeScanlineOrder UpperFieldFirst = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DisplayModeScanlineOrder LowerFieldFirst = 3 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.DXGIStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.DXGIStatus Occluded = 142213121 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus Clipped = 142213122 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus NoRedirection = 142213124 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus NoDesktopAccess = 142213125 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus GraphicsVidpnSourceInUse = 142213126 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus ModeChanged = 142213127 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus ModeChangeInProgress = 142213128 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus Unoccluded = 142213129 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus DdaWasStillDrawing = 142213130 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.DXGIStatus PresentRequired = 142213167 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.Feature: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.Feature PresentAllowTearing = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.Format: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.Format Unknown = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32A32_Typeless = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32A32_Float = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32A32_UInt = 3 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32A32_SInt = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32_Typeless = 5 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32_Float = 6 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32_UInt = 7 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32B32_SInt = 8 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16B16A16_Typeless = 9 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16B16A16_Float = 10 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16B16A16_UNorm = 11 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16B16A16_UInt = 12 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16B16A16_SNorm = 13 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16B16A16_SInt = 14 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32_Typeless = 15 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32_Float = 16 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32_UInt = 17 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G32_SInt = 18 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32G8X24_Typeless = 19 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format D32_Float_S8X24_UInt = 20 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32_Float_X8X24_Typeless = 21 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format X32_Typeless_G8X24_UInt = 22 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R10G10B10A2_Typeless = 23 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R10G10B10A2_UNorm = 24 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R10G10B10A2_UInt = 25 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R11G11B10_Float = 26 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8B8A8_Typeless = 27 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8B8A8_UNorm = 28 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8B8A8_UNorm_SRgb = 29 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8B8A8_UInt = 30 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8B8A8_SNorm = 31 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8B8A8_SInt = 32 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16_Typeless = 33 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16_Float = 34 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16_UNorm = 35 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16_UInt = 36 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16_SNorm = 37 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16G16_SInt = 38 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32_Typeless = 39 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format D32_Float = 40 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32_Float = 41 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32_UInt = 42 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R32_SInt = 43 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R24G8_Typeless = 44 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format D24_UNorm_S8_UInt = 45 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R24_UNorm_X8_Typeless = 46 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format X24_Typeless_G8_UInt = 47 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8_Typeless = 48 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8_UNorm = 49 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8_UInt = 50 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8_SNorm = 51 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8_SInt = 52 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16_Typeless = 53 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16_Float = 54 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format D16_UNorm = 55 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16_UNorm = 56 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16_UInt = 57 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16_SNorm = 58 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R16_SInt = 59 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8_Typeless = 60 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8_UNorm = 61 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8_UInt = 62 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8_SNorm = 63 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8_SInt = 64 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format A8_UNorm = 65 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R1_UNorm = 66 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R9G9B9E5_Sharedexp = 67 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R8G8_B8G8_UNorm = 68 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format G8R8_G8B8_UNorm = 69 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC1_Typeless = 70 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC1_UNorm = 71 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC1_UNorm_SRgb = 72 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC2_Typeless = 73 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC2_UNorm = 74 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC2_UNorm_SRgb = 75 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC3_Typeless = 76 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC3_UNorm = 77 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC3_UNorm_SRgb = 78 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC4_Typeless = 79 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC4_UNorm = 80 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC4_SNorm = 81 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC5_Typeless = 82 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC5_UNorm = 83 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC5_SNorm = 84 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B5G6R5_UNorm = 85 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B5G5R5A1_UNorm = 86 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B8G8R8A8_UNorm = 87 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B8G8R8X8_UNorm = 88 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format R10G10B10_Xr_Bias_A2_UNorm = 89 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B8G8R8A8_Typeless = 90 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B8G8R8A8_UNorm_SRgb = 91 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B8G8R8X8_Typeless = 92 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B8G8R8X8_UNorm_SRgb = 93 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC6H_Typeless = 94 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC6H_Uf16 = 95 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC6H_Sf16 = 96 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC7_Typeless = 97 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC7_UNorm = 98 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format BC7_UNorm_SRgb = 99 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format AYUV = 100 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format Y410 = 101 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format Y416 = 102 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format NV12 = 103 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format P010 = 104 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format P016 = 105 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format Opaque420 = 106 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format YUY2 = 107 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format Y210 = 108 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format Y216 = 109 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format NV11 = 110 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format AI44 = 111 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format IA44 = 112 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format P8 = 113 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format A8P8 = 114 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format B4G4R4A4_UNorm = 115 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format P208 = 130 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format V208 = 131 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Format V408 = 132 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.FramePresentationMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.FramePresentationMode Composed = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.FramePresentationMode Overlay = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.FramePresentationMode None = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.FramePresentationMode CompositionFailure = 3 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.GraphicsPreemptionGranularity: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.GraphicsPreemptionGranularity DmaBufferBoundary = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.GraphicsPreemptionGranularity PrimitiveBoundary = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.GraphicsPreemptionGranularity TriangleBoundary = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.GraphicsPreemptionGranularity PixelBoundary = 3 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.GraphicsPreemptionGranularity InstructionBoundary = 4 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.HardwareCompositionSupportFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.HardwareCompositionSupportFlags FullScreen = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.HardwareCompositionSupportFlags Windowed = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.HardwareCompositionSupportFlags CursorStretched = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.HardwareCompositionSupportFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.HdrMetadataType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.HdrMetadataType None = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.HdrMetadataType Hdr10 = 1 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.MapFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.MapFlags Read = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.MapFlags Write = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.MapFlags Discard = 4 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.MemorySegmentGroup: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.MemorySegmentGroup Local = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.MemorySegmentGroup NonLocal = 1 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.MultiplaneOverlayYCbCrFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.MultiplaneOverlayYCbCrFlags NominalRange = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.MultiplaneOverlayYCbCrFlags Bt709 = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.MultiplaneOverlayYCbCrFlags XvYCC = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.MultiplaneOverlayYCbCrFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.OfferResourceFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.OfferResourceFlags AllowDecommit = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OfferResourceFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.OfferResourcePriority: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.OfferResourcePriority Low = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OfferResourcePriority Normal = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OfferResourcePriority High = 3 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.OutputDuplicateFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.OutputDuplicateFlags CompositedUiCaptureOnly = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OutputDuplicateFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.OutputDuplicatePointerShapeType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.OutputDuplicatePointerShapeType Monochrome = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OutputDuplicatePointerShapeType Color = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OutputDuplicatePointerShapeType MaskedColor = 4 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.OverlayColorSpaceSupportFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.OverlayColorSpaceSupportFlags Present = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OverlayColorSpaceSupportFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.OverlaySupportFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.OverlaySupportFlags Direct = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.OverlaySupportFlags Scaling = 2 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.PresentFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.PresentFlags Test = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags DoNotSequence = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags Restart = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags DoNotWait = 8 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags StereoPreferRight = 16 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags StereoTemporaryMono = 32 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags RestrictToOutput = 64 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags UseDuration = 256 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags AllowTearing = 512 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.PresentFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.ReclaimResourceResults: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.ReclaimResourceResults Ok = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ReclaimResourceResults Discarded = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ReclaimResourceResults NotCommitted = 2 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.Residency: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.Residency FullyResident = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Residency ResidentInSharedMemory = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Residency EvictedToDisk = 3 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.ResourcePriority: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.ResourcePriority Minimum = 671088640 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ResourcePriority Low = 1342177280 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ResourcePriority Normal = 2013265920 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ResourcePriority High = -1610612736 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.ResourcePriority Maximum = -939524096 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.Scaling: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.Scaling Stretch = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Scaling None = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Scaling AspectRatioStretch = 2 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.SharedResourceFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.SharedResourceFlags Read = -2147483648 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SharedResourceFlags Write = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SharedResourceFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.SwapChainColorSpaceSupportFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.SwapChainColorSpaceSupportFlags Present = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainColorSpaceSupportFlags OverlayPresent = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainColorSpaceSupportFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.SwapChainFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.SwapChainFlags Nonprerotated = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags AllowModeSwitch = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags GdiCompatible = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags RestrictedContent = 8 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags RestrictSharedResourceDriver = 16 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags DisplayOnly = 32 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags FrameLatencyWaitAbleObject = 64 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags ForegroundLayer = 128 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags FullScreenVideo = 256 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags YuvVideo = 512 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags HwProtected = 1024 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags AllowTearing = 2048 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags RestrictedToAllHolographicDisplayS = 4096 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapChainFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.SwapEffect: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.SwapEffect Discard = 0 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapEffect Sequential = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapEffect FlipSequential = 3 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.SwapEffect FlipDiscard = 4 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.Usage: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.Usage ShaderInput = 16 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Usage RenderTargetOutput = 32 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Usage BackBuffer = 64 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Usage Shared = 128 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Usage ReadOnly = 256 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Usage DiscardOnPresent = 512 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.Usage UnorderedAccess = 1024 : Public, Static, Literal, HasDefault
+Struct SharpDX.DXGI.WindowAssociationFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.DXGI.WindowAssociationFlags IgnoreAll = 1 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.WindowAssociationFlags IgnoreAltEnter = 2 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.WindowAssociationFlags IgnorePrintScreen = 4 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.WindowAssociationFlags Valid = 7 : Public, Static, Literal, HasDefault
+    SharpDX.DXGI.WindowAssociationFlags None = 0 : Public, Static, Literal, HasDefault
+Class SharpDX.DXGI.DXGI: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Int32 CreateFactoryDebug = 1 : Public, Static, Literal, HasDefault
+  Methods:
+    CreateDXGIFactory1(Guid, IntPtr&(Out)): PrivateScope, Public, Static, HideBySig
+    CreateDXGIFactory2(Int32, Guid, IntPtr&(Out)): PrivateScope, Public, Static, HideBySig
+Class SharpDX.DXGI.ResultCode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SharpDX.ResultDescriptor InvalidCall : Public, Static, InitOnly
+    SharpDX.ResultDescriptor NotFound : Public, Static, InitOnly
+    SharpDX.ResultDescriptor MoreData : Public, Static, InitOnly
+    SharpDX.ResultDescriptor Unsupported : Public, Static, InitOnly
+    SharpDX.ResultDescriptor DeviceRemoved : Public, Static, InitOnly
+    SharpDX.ResultDescriptor DeviceHung : Public, Static, InitOnly
+    SharpDX.ResultDescriptor DeviceReset : Public, Static, InitOnly
+    SharpDX.ResultDescriptor WasStillDrawing : Public, Static, InitOnly
+    SharpDX.ResultDescriptor FrameStatisticsDisjoint : Public, Static, InitOnly
+    SharpDX.ResultDescriptor GraphicsVidpnSourceInUse : Public, Static, InitOnly
+    SharpDX.ResultDescriptor DriverInternalError : Public, Static, InitOnly
+    SharpDX.ResultDescriptor Nonexclusive : Public, Static, InitOnly
+    SharpDX.ResultDescriptor NotCurrentlyAvailable : Public, Static, InitOnly
+    SharpDX.ResultDescriptor RemoteClientDisconnected : Public, Static, InitOnly
+    SharpDX.ResultDescriptor RemoteOufOfMemory : Public, Static, InitOnly
+    SharpDX.ResultDescriptor AccessLost : Public, Static, InitOnly
+    SharpDX.ResultDescriptor WaitTimeout : Public, Static, InitOnly
+    SharpDX.ResultDescriptor SessionDisconnected : Public, Static, InitOnly
+    SharpDX.ResultDescriptor RestrictToOutputStale : Public, Static, InitOnly
+    SharpDX.ResultDescriptor CannotProtectContent : Public, Static, InitOnly
+    SharpDX.ResultDescriptor AccessDenied : Public, Static, InitOnly
+    SharpDX.ResultDescriptor NameAlreadyExists : Public, Static, InitOnly
+    SharpDX.ResultDescriptor SdkComponentMissing : Public, Static, InitOnly
+    SharpDX.ResultDescriptor NotCurrent : Public, Static, InitOnly
+    SharpDX.ResultDescriptor HwProtectionOufOfMemory : Public, Static, InitOnly
+    SharpDX.ResultDescriptor DynamicCodePolicyViolation : Public, Static, InitOnly
+    SharpDX.ResultDescriptor NonCompositedUi : Public, Static, InitOnly
+    SharpDX.ResultDescriptor ModeChangeInProgress : Public, Static, InitOnly
+    SharpDX.ResultDescriptor CacheCorrupt : Public, Static, InitOnly
+    SharpDX.ResultDescriptor CacheFull : Public, Static, InitOnly
+    SharpDX.ResultDescriptor CacheHashCollision : Public, Static, InitOnly
+    SharpDX.ResultDescriptor AlreadyExists : Public, Static, InitOnly
+Class SharpDX.DXGI.Adapter1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Adapter
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.AdapterDescription1 Description1 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description1(): PrivateScope, Public, HideBySig, SpecialName
+    GetDescription1(AdapterDescription1&(Out)): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Adapter2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Adapter1
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.AdapterDescription2 Description2 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description2(): PrivateScope, Public, HideBySig, SpecialName
+    GetDescription2(AdapterDescription2&(Out)): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Adapter3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Adapter2
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    RegisterHardwareContentProtectionTeardownStatusEvent(IntPtr): PrivateScope, Public, HideBySig
+    UnregisterHardwareContentProtectionTeardownStatus(Int32): PrivateScope, Public, HideBySig
+    QueryVideoMemoryInfo(Int32, MemorySegmentGroup): PrivateScope, Public, HideBySig
+    SetVideoMemoryReservation(Int32, MemorySegmentGroup, Int64): PrivateScope, Public, HideBySig
+    RegisterVideoMemoryBudgetChangeNotificationEvent(IntPtr): PrivateScope, Public, HideBySig
+    UnregisterVideoMemoryBudgetChangeNotification(Int32): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Adapter4: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Adapter3
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.AdapterDescription3 Desc3 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Desc3(): PrivateScope, Public, HideBySig, SpecialName
+    GetDesc3(AdapterDescription3&(Out)): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.DecodeSwapChain: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.Mathematics.Interop.RawRectangle SourceRect 'get set' : 
+    SharpDX.Mathematics.Interop.RawRectangle TargetRect 'get set' : 
+    SharpDX.DXGI.MultiplaneOverlayYCbCrFlags ColorSpace 'get set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SourceRect(): PrivateScope, Public, HideBySig, SpecialName
+    set_SourceRect(RawRectangle): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetRect(): PrivateScope, Public, HideBySig, SpecialName
+    set_TargetRect(RawRectangle): PrivateScope, Public, HideBySig, SpecialName
+    get_ColorSpace(): PrivateScope, Public, HideBySig, SpecialName
+    set_ColorSpace(MultiplaneOverlayYCbCrFlags): PrivateScope, Public, HideBySig, SpecialName
+    PresentBuffer(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    SetSourceRect(RawRectangle): PrivateScope, Assembly, HideBySig
+    SetTargetRect(RawRectangle): PrivateScope, Assembly, HideBySig
+    SetDestSize(Int32, Int32): PrivateScope, Public, HideBySig
+    GetSourceRect(RawRectangle&(Out)): PrivateScope, Assembly, HideBySig
+    GetTargetRect(RawRectangle&(Out)): PrivateScope, Assembly, HideBySig
+    GetDestSize(Int32&(Out), Int32&(Out)): PrivateScope, Public, HideBySig
+    SetColorSpace(MultiplaneOverlayYCbCrFlags): PrivateScope, Assembly, HideBySig
+    GetColorSpace(): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Device1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Device
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 MaximumFrameLatency 'get set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MaximumFrameLatency(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumFrameLatency(Int32): PrivateScope, Public, HideBySig, SpecialName
+    SetMaximumFrameLatency(Int32): PrivateScope, Assembly, HideBySig
+    GetMaximumFrameLatency(Int32&(Out)): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Device2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Device1
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    OfferResources(Int32, Resource[], OfferResourcePriority): PrivateScope, Public, HideBySig
+    OfferResources(Int32, ComArray`1, OfferResourcePriority): PrivateScope, Public, HideBySig
+    ReclaimResources(Int32, Resource[], RawBool[]): PrivateScope, Public, HideBySig
+    ReclaimResources(Int32, ComArray`1, RawBool[]): PrivateScope, Public, HideBySig
+    EnqueueSetEvent(IntPtr): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Device3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Device2
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    Trim(): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Device4: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Device3
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    OfferResources1(Int32, Resource[], OfferResourcePriority, Int32): PrivateScope, Public, HideBySig
+    OfferResources1(Int32, ComArray`1, OfferResourcePriority, Int32): PrivateScope, Public, HideBySig
+    ReclaimResources1(Int32, Resource[], ReclaimResourceResults[]): PrivateScope, Public, HideBySig
+    ReclaimResources1(Int32, ComArray`1, ReclaimResourceResults[]): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.DisplayControl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.Mathematics.Interop.RawBool IsStereoEnabled 'get ' : 
+    SharpDX.Mathematics.Interop.RawBool StereoEnabled 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsStereoEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_StereoEnabled(RawBool): PrivateScope, Public, HideBySig, SpecialName
+    IsStereoEnabled_(): PrivateScope, Assembly, HideBySig
+    SetStereoEnabled(RawBool): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Factory3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Factory2
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 CreationFlags 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_CreationFlags(): PrivateScope, Public, HideBySig, SpecialName
+    GetCreationFlags(): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Factory5: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Factory4
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    CheckFeatureSupport(Feature, IntPtr, Int32): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.FactoryMedia: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    CreateSwapChainForCompositionSurfaceHandle(ComObject, IntPtr, SwapChainDescription1&, Output, SwapChain1&(Out)): PrivateScope, Public, HideBySig
+    CreateDecodeSwapChainForCompositionSurfaceHandle(ComObject, IntPtr, DecodeSwapChainDescription, Resource, Output, DecodeSwapChain&(Out)): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.ISurfaceImageSourceManagerNative: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    FlushAllSurfacesWithDevice(ComObject): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.ISurfaceImageSourceNative: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.Device Device 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Device(Device): PrivateScope, Public, HideBySig, SpecialName
+    SetDevice(Device): PrivateScope, Assembly, HideBySig
+    BeginDraw(RawRectangle, RawPoint&(Out)): PrivateScope, Public, HideBySig
+    EndDraw(): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.ISurfaceImageSourceNativeWithD2D: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.ComObject Device 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Device(ComObject): PrivateScope, Public, HideBySig, SpecialName
+    SetDevice(ComObject): PrivateScope, Assembly, HideBySig
+    BeginDraw(RawRectangle, Guid, IntPtr&(Out), RawPoint&(Out)): PrivateScope, Public, HideBySig
+    EndDraw(): PrivateScope, Public, HideBySig
+    SuspendDraw(): PrivateScope, Public, HideBySig
+    ResumeDraw(): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.ISwapChainBackgroundPanelNative: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.SwapChain SwapChain 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SwapChain(SwapChain): PrivateScope, Public, HideBySig, SpecialName
+    SetSwapChain(SwapChain): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.ISwapChainPanelNative: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.SwapChain SwapChain 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SwapChain(SwapChain): PrivateScope, Public, HideBySig, SpecialName
+    SetSwapChain(SwapChain): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.ISwapChainPanelNative2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.ISwapChainPanelNative
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    IntPtr SwapChainHandle 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SwapChainHandle(IntPtr): PrivateScope, Public, HideBySig, SpecialName
+    SetSwapChainHandle(IntPtr): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.IVirtualSurfaceImageSourceNative: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.ISurfaceImageSourceNative
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.Mathematics.Interop.RawRectangle VisibleBounds 'get ' : 
+    SharpDX.Mathematics.Interop.RawRectangle[] UpdateRectangles 'get ' : 
+  Events:
+    System.EventHandler`1[System.EventArgs] UpdatesNeeded: 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_VisibleBounds(): PrivateScope, Public, HideBySig, SpecialName
+    Invalidate(RawRectangle): PrivateScope, Public, HideBySig
+    GetUpdateRectCount(): PrivateScope, Assembly, HideBySig
+    GetUpdateRects(RawRectangle[], Int32): PrivateScope, Assembly, HideBySig
+    GetVisibleBounds(RawRectangle&(Out)): PrivateScope, Assembly, HideBySig
+    RegisterForUpdatesNeeded_(IntPtr): PrivateScope, Assembly, HideBySig
+    Resize(Int32, Int32): PrivateScope, Public, HideBySig
+    get_UpdateRectangles(): PrivateScope, Public, HideBySig, SpecialName
+    add_UpdatesNeeded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdatesNeeded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+Interface SharpDX.DXGI.IVirtualSurfaceUpdatesCallbackNative: AutoLayout, AnsiClass, Class, ClassSemanticsMask, Abstract
+  Interfaces:
+    SharpDX.ICallbackable
+    System.IDisposable
+  Methods:
+    UpdatesNeeded(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class SharpDX.DXGI.IVirtualSurfaceUpdatesCallbackNativeNative: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :SharpDX.ComObjectCallback
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    SharpDX.DXGI.IVirtualSurfaceUpdatesCallbackNative
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    UpdatesNeeded_(): PrivateScope, Assembly, HideBySig
+    UpdatesNeeded(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class SharpDX.DXGI.KeyedMutex: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DeviceChild
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    Acquire(Int64, Int32): PrivateScope, Public, HideBySig
+    Release(Int64): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Output: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DXGIObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.OutputDescription Description 'get ' : 
+    SharpDX.DXGI.GammaControlCapabilities GammaControlCapabilities 'get ' : 
+    SharpDX.DXGI.GammaControl GammaControl 'get set' : 
+    SharpDX.DXGI.FrameStatistics FrameStatistics 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    get_GammaControlCapabilities(): PrivateScope, Public, HideBySig, SpecialName
+    get_GammaControl(): PrivateScope, Public, HideBySig, SpecialName
+    set_GammaControl(GammaControl): PrivateScope, Public, HideBySig, SpecialName
+    get_FrameStatistics(): PrivateScope, Public, HideBySig, SpecialName
+    GetDescription(OutputDescription&(Out)): PrivateScope, Assembly, HideBySig
+    GetDisplayModeList(Format, Int32, Int32&, ModeDescription[]): PrivateScope, Assembly, HideBySig
+    FindClosestMatchingMode(ModeDescription&, ModeDescription&(Out), ComObject): PrivateScope, Assembly, HideBySig
+    WaitForVerticalBlank(): PrivateScope, Public, HideBySig
+    TakeOwnership(ComObject, RawBool): PrivateScope, Public, HideBySig
+    ReleaseOwnership(): PrivateScope, Public, HideBySig
+    GetGammaControlCapabilities(GammaControlCapabilities&(Out)): PrivateScope, Assembly, HideBySig
+    SetGammaControl(GammaControl&): PrivateScope, Assembly, HideBySig
+    GetGammaControl(GammaControl&(Out)): PrivateScope, Assembly, HideBySig
+    SetDisplaySurface(Surface): PrivateScope, Public, HideBySig
+    CopyDisplaySurfaceTo(Surface): PrivateScope, Public, HideBySig
+    GetFrameStatistics(FrameStatistics&(Out)): PrivateScope, Assembly, HideBySig
+    GetClosestMatchingMode(ComObject, ModeDescription, ModeDescription&(Out)): PrivateScope, Public, HideBySig
+    GetDisplayModeList(Format, DisplayModeEnumerationFlags): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Output1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Output
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetDisplayModeList1(Format, Int32, Int32&, ModeDescription1[]): PrivateScope, Assembly, HideBySig
+    FindClosestMatchingMode1(ModeDescription1&, ModeDescription1&(Out), ComObject): PrivateScope, Public, HideBySig
+    GetDisplaySurfaceData1(Resource): PrivateScope, Public, HideBySig
+    DuplicateOutput(ComObject): PrivateScope, Public, HideBySig
+    GetDisplayModeList1(Format, DisplayModeEnumerationFlags): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Output2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Output1
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean SupportsOverlays 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    SupportsOverlays_(): PrivateScope, Assembly, HideBySig
+    get_SupportsOverlays(): PrivateScope, Public, HideBySig, SpecialName
+Class SharpDX.DXGI.Output3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Output2
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    CheckOverlaySupport(Format, ComObject): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Output4: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Output3
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    CheckOverlayColorSpaceSupport(Format, ColorSpaceType, ComObject): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Output5: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Output4
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    DuplicateOutput1(ComObject, Int32, Int32, Format[]): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Output6: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Output5
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.OutputDescription1 Description1 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description1(): PrivateScope, Public, HideBySig, SpecialName
+    GetDescription1(OutputDescription1&(Out)): PrivateScope, Assembly, HideBySig
+    CheckHardwareCompositionSupport(Int32&(Out)): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.OutputDuplication: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DXGIObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.OutputDuplicateDescription Description 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    GetDescription(OutputDuplicateDescription&(Out)): PrivateScope, Assembly, HideBySig
+    AcquireNextFrame(Int32, OutputDuplicateFrameInformation&(Out), Resource&(Out)): PrivateScope, Public, HideBySig
+    GetFrameDirtyRects(Int32, RawRectangle[], Int32&(Out)): PrivateScope, Public, HideBySig
+    GetFrameMoveRects(Int32, OutputDuplicateMoveRectangle[], Int32&(Out)): PrivateScope, Public, HideBySig
+    GetFramePointerShape(Int32, IntPtr, Int32&(Out), OutputDuplicatePointerShapeInformation&(Out)): PrivateScope, Public, HideBySig
+    MapDesktopSurface(MappedRectangle&(Out)): PrivateScope, Assembly, HideBySig
+    UnMapDesktopSurface(): PrivateScope, Public, HideBySig
+    ReleaseFrame(): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Resource: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DeviceChild
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    IntPtr SharedHandle 'get ' : 
+    Int32 EvictionPriority 'get set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SharedHandle(): PrivateScope, Public, HideBySig, SpecialName
+    get_EvictionPriority(): PrivateScope, Public, HideBySig, SpecialName
+    set_EvictionPriority(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetSharedHandle(IntPtr&(Out)): PrivateScope, Assembly, HideBySig
+    GetUsage(Int32): PrivateScope, Public, HideBySig
+    SetEvictionPriority(Int32): PrivateScope, Assembly, HideBySig
+    GetEvictionPriority(Int32&(Out)): PrivateScope, Assembly, HideBySig
+Class SharpDX.DXGI.Resource1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Resource
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    CreateSubresourceSurface(Int32, Surface2): PrivateScope, Assembly, HideBySig
+    CreateSharedHandle(Nullable`1, SharedResourceFlags, String): PrivateScope, Assembly, HideBySig
+    CreateSharedHandle(String, SharedResourceFlags, Nullable`1(Optional, HasDefault)): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Surface: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DeviceChild
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.SurfaceDescription Description 'get ' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    GetDescription(SurfaceDescription&(Out)): PrivateScope, Assembly, HideBySig
+    Map(MappedRectangle&(Out), Int32): PrivateScope, Assembly, HideBySig
+    Unmap(): PrivateScope, Public, HideBySig
+    Map(MapFlags): PrivateScope, Public, HideBySig
+    Map(MapFlags, DataStream&(Out)): PrivateScope, Public, HideBySig
+    FromSwapChain(SwapChain, Int32): PrivateScope, Public, Static, HideBySig
+Class SharpDX.DXGI.Surface1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Surface
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetDC(RawBool): PrivateScope, Public, HideBySig
+    ReleaseDC_(Nullable`1): PrivateScope, Assembly, HideBySig
+    ReleaseDC(): PrivateScope, Public, HideBySig
+    ReleaseDC(RawRectangle): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.Surface2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.Surface1
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DXGI.Resource1, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetResource(Guid, IntPtr&(Out), Int32&(Out)): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.SwapChain: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.DeviceChild
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DXGI.Factory, SharpDX.ComObject, SharpDX.DXGI.SwapChainDescription): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.SwapChainDescription Description 'get ' : 
+    SharpDX.DXGI.Output ContainingOutput 'get ' : 
+    Int32 LastPresentCount 'get ' : 
+    SharpDX.DXGI.FrameStatistics FrameStatistics 'get ' : 
+    Boolean IsFullScreen 'get set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    get_ContainingOutput(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastPresentCount(): PrivateScope, Public, HideBySig, SpecialName
+    TryPresent(Int32, PresentFlags): PrivateScope, Public, HideBySig
+    GetBuffer(Int32, Guid, IntPtr&(Out)): PrivateScope, Assembly, HideBySig
+    SetFullscreenState(RawBool, Output): PrivateScope, Public, HideBySig
+    GetFullscreenState(RawBool&(Out), Output&(Out)): PrivateScope, Public, HideBySig
+    GetDescription(SwapChainDescription&(Out)): PrivateScope, Assembly, HideBySig
+    ResizeBuffers(Int32, Int32, Int32, Format, SwapChainFlags): PrivateScope, Public, HideBySig
+    ResizeTarget(ModeDescription&): PrivateScope, Public, HideBySig
+    GetContainingOutput(Output&(Out)): PrivateScope, Assembly, HideBySig
+    TryGetFrameStatistics(FrameStatistics&(Out)): PrivateScope, Public, HideBySig
+    GetLastPresentCount(Int32&(Out)): PrivateScope, Assembly, HideBySig
+    GetBackBuffer(Int32): PrivateScope, Public, HideBySig
+    get_FrameStatistics(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFullScreen(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsFullScreen(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Present(Int32, PresentFlags): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.SwapChain1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.SwapChain
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DXGI.Factory2, SharpDX.ComObject, IntPtr, SharpDX.DXGI.SwapChainDescription1 ByRef, System.Nullable`1[SharpDX.DXGI.SwapChainFullScreenDescription], SharpDX.DXGI.Output): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DXGI.Factory2, SharpDX.ComObject, SharpDX.ComObject, SharpDX.DXGI.SwapChainDescription1 ByRef, SharpDX.DXGI.Output): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DXGI.Factory2, SharpDX.ComObject, SharpDX.DXGI.SwapChainDescription1 ByRef, SharpDX.DXGI.Output): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.SwapChainDescription1 Description1 'get ' : 
+    SharpDX.DXGI.SwapChainFullScreenDescription FullscreenDescription 'get ' : 
+    IntPtr Hwnd 'get ' : 
+    SharpDX.Mathematics.Interop.RawBool IsTemporaryMonoSupported 'get ' : 
+    SharpDX.DXGI.Output RestrictToOutput 'get ' : 
+    SharpDX.Mathematics.Interop.RawColor4 BackgroundColor 'get set' : 
+    SharpDX.DXGI.DisplayModeRotation Rotation 'get set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Description1(): PrivateScope, Public, HideBySig, SpecialName
+    get_FullscreenDescription(): PrivateScope, Public, HideBySig, SpecialName
+    get_Hwnd(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsTemporaryMonoSupported(): PrivateScope, Public, HideBySig, SpecialName
+    get_RestrictToOutput(): PrivateScope, Public, HideBySig, SpecialName
+    get_BackgroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackgroundColor(RawColor4): PrivateScope, Public, HideBySig, SpecialName
+    get_Rotation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Rotation(DisplayModeRotation): PrivateScope, Public, HideBySig, SpecialName
+    GetDescription1(SwapChainDescription1&(Out)): PrivateScope, Assembly, HideBySig
+    GetFullscreenDescription(SwapChainFullScreenDescription&(Out)): PrivateScope, Assembly, HideBySig
+    GetHwnd(IntPtr&(Out)): PrivateScope, Assembly, HideBySig
+    GetCoreWindow(Guid, IntPtr&(Out)): PrivateScope, Public, HideBySig
+    Present1(Int32, PresentFlags, IntPtr): PrivateScope, Assembly, HideBySig
+    IsTemporaryMonoSupported_(): PrivateScope, Assembly, HideBySig
+    GetRestrictToOutput(Output&(Out)): PrivateScope, Assembly, HideBySig
+    SetBackgroundColor(RawColor4): PrivateScope, Assembly, HideBySig
+    GetBackgroundColor(RawColor4&(Out)): PrivateScope, Assembly, HideBySig
+    SetRotation(DisplayModeRotation): PrivateScope, Assembly, HideBySig
+    GetRotation(DisplayModeRotation&(Out)): PrivateScope, Assembly, HideBySig
+    Present(Int32, PresentFlags, PresentParameters): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.SwapChain2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.SwapChain1
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 MaximumFrameLatency 'get set' : 
+    IntPtr FrameLatencyWaitableObject 'get ' : 
+    SharpDX.Mathematics.Interop.RawMatrix3x2 MatrixTransform 'get set' : 
+    SharpDX.Size2 SourceSize 'get set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MaximumFrameLatency(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumFrameLatency(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_FrameLatencyWaitableObject(): PrivateScope, Public, HideBySig, SpecialName
+    get_MatrixTransform(): PrivateScope, Public, HideBySig, SpecialName
+    set_MatrixTransform(RawMatrix3x2): PrivateScope, Public, HideBySig, SpecialName
+    SetSourceSize(Int32, Int32): PrivateScope, Assembly, HideBySig
+    GetSourceSize(Int32&(Out), Int32&(Out)): PrivateScope, Assembly, HideBySig
+    SetMaximumFrameLatency(Int32): PrivateScope, Assembly, HideBySig
+    GetMaximumFrameLatency(Int32&(Out)): PrivateScope, Assembly, HideBySig
+    GetFrameLatencyWaitableObject(): PrivateScope, Assembly, HideBySig
+    SetMatrixTransform(RawMatrix3x2&): PrivateScope, Assembly, HideBySig
+    GetMatrixTransform(RawMatrix3x2&(Out)): PrivateScope, Assembly, HideBySig
+    get_SourceSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_SourceSize(Size2): PrivateScope, Public, HideBySig, SpecialName
+Class SharpDX.DXGI.SwapChain3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.SwapChain2
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 CurrentBackBufferIndex 'get ' : 
+    SharpDX.DXGI.ColorSpaceType ColorSpace1 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_CurrentBackBufferIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ColorSpace1(ColorSpaceType): PrivateScope, Public, HideBySig, SpecialName
+    GetCurrentBackBufferIndex(): PrivateScope, Assembly, HideBySig
+    CheckColorSpaceSupport(ColorSpaceType): PrivateScope, Public, HideBySig
+    SetColorSpace1(ColorSpaceType): PrivateScope, Assembly, HideBySig
+    ResizeBuffers1(Int32, Int32, Int32, Format, SwapChainFlags, Int32[], ComObject[]): PrivateScope, Public, HideBySig
+    ResizeBuffers1(Int32, Int32, Int32, Format, SwapChainFlags, Int32[], ComArray`1): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.SwapChain4: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.DXGI.SwapChain3
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    SetHDRMetaData(HdrMetadataType, Int32, IntPtr): PrivateScope, Public, HideBySig
+Class SharpDX.DXGI.SwapChainMedia: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :SharpDX.ComObject
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.DXGI.FrameStatisticsMedia FrameStatisticsMedia 'get ' : 
+    Int32 PresentDuration 'set' : 
+  Methods:
+    op_Explicit(IntPtr): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_FrameStatisticsMedia(): PrivateScope, Public, HideBySig, SpecialName
+    set_PresentDuration(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetFrameStatisticsMedia(FrameStatisticsMedia&(Out)): PrivateScope, Assembly, HideBySig
+    SetPresentDuration(Int32): PrivateScope, Assembly, HideBySig
+    CheckPresentDurationSupport(Int32, Int32&(Out), Int32&(Out)): PrivateScope, Public, HideBySig
+Struct SharpDX.DXGI.AdapterDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubsystemId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 Luid : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.AdapterDescription+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Char Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubsystemId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 Luid : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.AdapterDescription1: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubsystemId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 Luid : Public
+    SharpDX.DXGI.AdapterFlags Flags : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.AdapterDescription1+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Char Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubsystemId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 Luid : Public
+    SharpDX.DXGI.AdapterFlags Flags : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.AdapterDescription2: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubsystemId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 Luid : Public
+    SharpDX.DXGI.AdapterFlags Flags : Public
+    SharpDX.DXGI.GraphicsPreemptionGranularity GraphicsPreemptionGranularity : Public
+    SharpDX.DXGI.ComputePreemptionGranularity ComputePreemptionGranularity : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.AdapterDescription2+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Char Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubsystemId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 Luid : Public
+    SharpDX.DXGI.AdapterFlags Flags : Public
+    SharpDX.DXGI.GraphicsPreemptionGranularity GraphicsPreemptionGranularity : Public
+    SharpDX.DXGI.ComputePreemptionGranularity ComputePreemptionGranularity : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.AdapterDescription3: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubSysId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 AdapterLuid : Public
+    SharpDX.DXGI.AdapterFlags3 Flags : Public
+    SharpDX.DXGI.GraphicsPreemptionGranularity GraphicsPreemptionGranularity : Public
+    SharpDX.DXGI.ComputePreemptionGranularity ComputePreemptionGranularity : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.AdapterDescription3+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Char Description : Public
+    Int32 VendorId : Public
+    Int32 DeviceId : Public
+    Int32 SubSysId : Public
+    Int32 Revision : Public
+    SharpDX.PointerSize DedicatedVideoMemory : Public
+    SharpDX.PointerSize DedicatedSystemMemory : Public
+    SharpDX.PointerSize SharedSystemMemory : Public
+    Int64 AdapterLuid : Public
+    SharpDX.DXGI.AdapterFlags3 Flags : Public
+    SharpDX.DXGI.GraphicsPreemptionGranularity GraphicsPreemptionGranularity : Public
+    SharpDX.DXGI.ComputePreemptionGranularity ComputePreemptionGranularity : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.DecodeSwapChainDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 Flags : Public
+Struct SharpDX.DXGI.FrameStatistics: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 PresentCount : Public
+    Int32 PresentRefreshCount : Public
+    Int32 SyncRefreshCount : Public
+    Int64 SyncQPCTime : Public
+    Int64 SyncGPUTime : Public
+Struct SharpDX.DXGI.FrameStatisticsMedia: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 PresentCount : Public
+    Int32 PresentRefreshCount : Public
+    Int32 SyncRefreshCount : Public
+    Int64 SyncQPCTime : Public
+    Int64 SyncGPUTime : Public
+    SharpDX.DXGI.FramePresentationMode CompositionMode : Public
+    Int32 ApprovedPresentDuration : Public
+Struct SharpDX.DXGI.GammaControl: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.Mathematics.Interop.RawColor4 Scale : Public
+    SharpDX.Mathematics.Interop.RawColor4 Offset : Public
+    SharpDX.Mathematics.Interop.RawColor4[] _GammaCurve : Assembly
+  Properties:
+    SharpDX.Mathematics.Interop.RawColor4[] GammaCurve 'get ' : 
+  Methods:
+    get_GammaCurve(): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.GammaControl+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.Mathematics.Interop.RawColor4 Scale : Public
+    SharpDX.Mathematics.Interop.RawColor4 Offset : Public
+    SharpDX.Mathematics.Interop.RawColor4 GammaCurve : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.GammaControlCapabilities: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.Mathematics.Interop.RawBool IsScaleAndOffsetSupported : Public
+    Single MaximumConvertedValue : Public
+    Single MinimumConvertedValue : Public
+    Int32 ControlPointsCount : Public
+    Single[] _ControlPoints : Assembly
+  Properties:
+    Single[] ControlPoints 'get ' : 
+  Methods:
+    get_ControlPoints(): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.GammaControlCapabilities+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.Mathematics.Interop.RawBool IsScaleAndOffsetSupported : Public
+    Single MaximumConvertedValue : Public
+    Single MinimumConvertedValue : Public
+    Int32 ControlPointsCount : Public
+    Single ControlPoints : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.HdrMetadataHdr10: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int16[] _RedPrimary : Assembly
+    Int16[] _GreenPrimary : Assembly
+    Int16[] _BluePrimary : Assembly
+    Int16[] _WhitePoint : Assembly
+    Int32 MaxMasteringLuminance : Public
+    Int32 MinMasteringLuminance : Public
+    Int16 MaxContentLightLevel : Public
+    Int16 MaxFrameAverageLightLevel : Public
+  Properties:
+    Int16[] RedPrimary 'get ' : 
+    Int16[] GreenPrimary 'get ' : 
+    Int16[] BluePrimary 'get ' : 
+    Int16[] WhitePoint 'get ' : 
+  Methods:
+    get_RedPrimary(): PrivateScope, Public, HideBySig, SpecialName
+    get_GreenPrimary(): PrivateScope, Public, HideBySig, SpecialName
+    get_BluePrimary(): PrivateScope, Public, HideBySig, SpecialName
+    get_WhitePoint(): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.HdrMetadataHdr10+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int16 RedPrimary : Public
+    Int16 GreenPrimary : Public
+    Int16 BluePrimary : Public
+    Int16 WhitePoint : Public
+    Int32 MaxMasteringLuminance : Public
+    Int32 MinMasteringLuminance : Public
+    Int16 MaxContentLightLevel : Public
+    Int16 MaxFrameAverageLightLevel : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.JpegAcHuffmanTable: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Byte[] _CodeCounts : Assembly
+    Byte[] _CodeValues : Assembly
+  Properties:
+    Byte[] CodeCounts 'get ' : 
+    Byte[] CodeValues 'get ' : 
+  Methods:
+    get_CodeCounts(): PrivateScope, Public, HideBySig, SpecialName
+    get_CodeValues(): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.JpegAcHuffmanTable+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Byte CodeCounts : Public
+    Byte CodeValues : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.JpegDeviceContextHuffmanTable: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Byte[] _CodeCounts : Assembly
+    Byte[] _CodeValues : Assembly
+  Properties:
+    Byte[] CodeCounts 'get ' : 
+    Byte[] CodeValues 'get ' : 
+  Methods:
+    get_CodeCounts(): PrivateScope, Public, HideBySig, SpecialName
+    get_CodeValues(): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.JpegDeviceContextHuffmanTable+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Byte CodeCounts : Public
+    Byte CodeValues : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.JpegQuantizationTable: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Byte[] _Elements : Assembly
+  Properties:
+    Byte[] Elements 'get ' : 
+  Methods:
+    get_Elements(): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.JpegQuantizationTable+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Byte Elements : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.MappedRectangle: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 Pitch : Public
+    IntPtr PBits : Public
+Struct SharpDX.DXGI.ModeDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Int32, Int32, SharpDX.DXGI.Rational, SharpDX.DXGI.Format): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(SharpDX.DXGI.Format): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Width : Public
+    Int32 Height : Public
+    SharpDX.DXGI.Rational RefreshRate : Public
+    SharpDX.DXGI.Format Format : Public
+    SharpDX.DXGI.DisplayModeScanlineOrder ScanlineOrdering : Public
+    SharpDX.DXGI.DisplayModeScaling Scaling : Public
+Struct SharpDX.DXGI.ModeDescription1: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 Width : Public
+    Int32 Height : Public
+    SharpDX.DXGI.Rational RefreshRate : Public
+    SharpDX.DXGI.Format Format : Public
+    SharpDX.DXGI.DisplayModeScanlineOrder ScanlineOrdering : Public
+    SharpDX.DXGI.DisplayModeScaling Scaling : Public
+    SharpDX.Mathematics.Interop.RawBool Stereo : Public
+Struct SharpDX.DXGI.OutputDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String DeviceName : Public
+    SharpDX.Mathematics.Interop.RawRectangle DesktopBounds : Public
+    SharpDX.Mathematics.Interop.RawBool IsAttachedToDesktop : Public
+    SharpDX.DXGI.DisplayModeRotation Rotation : Public
+    IntPtr MonitorHandle : Public
+  Methods:
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.OutputDescription+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Char DeviceName : Public
+    SharpDX.Mathematics.Interop.RawRectangle DesktopBounds : Public
+    SharpDX.Mathematics.Interop.RawBool IsAttachedToDesktop : Public
+    SharpDX.DXGI.DisplayModeRotation Rotation : Public
+    IntPtr MonitorHandle : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.OutputDescription1: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String DeviceName : Public
+    SharpDX.Mathematics.Interop.RawRectangle DesktopCoordinates : Public
+    SharpDX.Mathematics.Interop.RawBool AttachedToDesktop : Public
+    SharpDX.DXGI.DisplayModeRotation Rotation : Public
+    IntPtr Monitor : Public
+    Int32 BitsPerColor : Public
+    SharpDX.DXGI.ColorSpaceType ColorSpace : Public
+    Single[] _RedPrimary : Assembly
+    Single[] _GreenPrimary : Assembly
+    Single[] _BluePrimary : Assembly
+    Single[] _WhitePoint : Assembly
+    Single MinLuminance : Public
+    Single MaxLuminance : Public
+    Single MaxFullFrameLuminance : Public
+  Properties:
+    Single[] RedPrimary 'get ' : 
+    Single[] GreenPrimary 'get ' : 
+    Single[] BluePrimary 'get ' : 
+    Single[] WhitePoint 'get ' : 
+  Methods:
+    get_RedPrimary(): PrivateScope, Public, HideBySig, SpecialName
+    get_GreenPrimary(): PrivateScope, Public, HideBySig, SpecialName
+    get_BluePrimary(): PrivateScope, Public, HideBySig, SpecialName
+    get_WhitePoint(): PrivateScope, Public, HideBySig, SpecialName
+    __MarshalFree(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalFrom(__Native&): PrivateScope, Assembly, HideBySig
+    __MarshalTo(__Native&): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.OutputDescription1+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Char DeviceName : Public
+    SharpDX.Mathematics.Interop.RawRectangle DesktopCoordinates : Public
+    SharpDX.Mathematics.Interop.RawBool AttachedToDesktop : Public
+    SharpDX.DXGI.DisplayModeRotation Rotation : Public
+    IntPtr Monitor : Public
+    Int32 BitsPerColor : Public
+    SharpDX.DXGI.ColorSpaceType ColorSpace : Public
+    Single RedPrimary : Public
+    Single GreenPrimary : Public
+    Single BluePrimary : Public
+    Single WhitePoint : Public
+    Single MinLuminance : Public
+    Single MaxLuminance : Public
+    Single MaxFullFrameLuminance : Public
+  Methods:
+    __MarshalFree(): PrivateScope, Assembly, HideBySig
+Struct SharpDX.DXGI.OutputDuplicateDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.DXGI.ModeDescription ModeDescription : Public
+    SharpDX.DXGI.DisplayModeRotation Rotation : Public
+    SharpDX.Mathematics.Interop.RawBool DesktopImageInSystemMemory : Public
+Struct SharpDX.DXGI.OutputDuplicateFrameInformation: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int64 LastPresentTime : Public
+    Int64 LastMouseUpdateTime : Public
+    Int32 AccumulatedFrames : Public
+    SharpDX.Mathematics.Interop.RawBool RectsCoalesced : Public
+    SharpDX.Mathematics.Interop.RawBool ProtectedContentMaskedOut : Public
+    SharpDX.DXGI.OutputDuplicatePointerPosition PointerPosition : Public
+    Int32 TotalMetadataBufferSize : Public
+    Int32 PointerShapeBufferSize : Public
+Struct SharpDX.DXGI.OutputDuplicateMoveRectangle: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.Mathematics.Interop.RawPoint SourcePoint : Public
+    SharpDX.Mathematics.Interop.RawRectangle DestinationRect : Public
+Struct SharpDX.DXGI.OutputDuplicatePointerPosition: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.Mathematics.Interop.RawPoint Position : Public
+    SharpDX.Mathematics.Interop.RawBool Visible : Public
+Struct SharpDX.DXGI.OutputDuplicatePointerShapeInformation: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 Type : Public
+    Int32 Width : Public
+    Int32 Height : Public
+    Int32 Pitch : Public
+    SharpDX.Mathematics.Interop.RawPoint HotSpot : Public
+Struct SharpDX.DXGI.PresentParameters: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 DirtyRectsCount : Assembly
+    IntPtr PDirtyRects : Assembly
+    IntPtr PScrollRect : Assembly
+    IntPtr PScrollOffset : Assembly
+    SharpDX.Mathematics.Interop.RawRectangle[] DirtyRectangles : Public
+    System.Nullable`1[SharpDX.Mathematics.Interop.RawRectangle] ScrollRectangle : Public
+    System.Nullable`1[SharpDX.Mathematics.Interop.RawPoint] ScrollOffset : Public
+Struct SharpDX.DXGI.PresentParameters+__Native: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 DirtyRectsCount : Public
+    IntPtr PDirtyRects : Public
+    IntPtr PScrollRect : Public
+    IntPtr PScrollOffset : Public
+Struct SharpDX.DXGI.QueryVideoMemoryInformation: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int64 Budget : Public
+    Int64 CurrentUsage : Public
+    Int64 AvailableForReservation : Public
+    Int64 CurrentReservation : Public
+Struct SharpDX.DXGI.Rational: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[SharpDX.DXGI.Rational]
+  Fields:
+    Int32 Numerator : Public
+    Int32 Denominator : Public
+    SharpDX.DXGI.Rational Empty : Public, Static, InitOnly
+  Methods:
+    Equals(Rational): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    op_Equality(Rational, Rational): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(Rational, Rational): PrivateScope, Public, Static, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct SharpDX.DXGI.SampleDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Count : Public
+    Int32 Quality : Public
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct SharpDX.DXGI.SharedResource: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr Handle : Public
+Struct SharpDX.DXGI.SurfaceDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 Width : Public
+    Int32 Height : Public
+    SharpDX.DXGI.Format Format : Public
+    SharpDX.DXGI.SampleDescription SampleDescription : Public
+Struct SharpDX.DXGI.SwapChainDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.DXGI.ModeDescription ModeDescription : Public
+    SharpDX.DXGI.SampleDescription SampleDescription : Public
+    SharpDX.DXGI.Usage Usage : Public
+    Int32 BufferCount : Public
+    IntPtr OutputHandle : Public
+    SharpDX.Mathematics.Interop.RawBool IsWindowed : Public
+    SharpDX.DXGI.SwapEffect SwapEffect : Public
+    SharpDX.DXGI.SwapChainFlags Flags : Public
+Struct SharpDX.DXGI.SwapChainDescription1: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 Width : Public
+    Int32 Height : Public
+    SharpDX.DXGI.Format Format : Public
+    SharpDX.Mathematics.Interop.RawBool Stereo : Public
+    SharpDX.DXGI.SampleDescription SampleDescription : Public
+    SharpDX.DXGI.Usage Usage : Public
+    Int32 BufferCount : Public
+    SharpDX.DXGI.Scaling Scaling : Public
+    SharpDX.DXGI.SwapEffect SwapEffect : Public
+    SharpDX.DXGI.AlphaMode AlphaMode : Public
+    SharpDX.DXGI.SwapChainFlags Flags : Public
+Struct SharpDX.DXGI.SwapChainFullScreenDescription: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.DXGI.Rational RefreshRate : Public
+    SharpDX.DXGI.DisplayModeScanlineOrder ScanlineOrdering : Public
+    SharpDX.DXGI.DisplayModeScaling Scaling : Public
+    SharpDX.Mathematics.Interop.RawBool Windowed : Public
+Class SharpDX.DXGI.ModuleInit: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Setup(): PrivateScope, Assembly, Static, HideBySig
+Class SharpDX.DXGI.NamespaceDoc: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SharpDX.DXGI.VirtualSurfaceUpdatesCallbackNativeShadow: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :SharpDX.ComObjectShadow
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToIntPtr(IVirtualSurfaceUpdatesCallbackNative): PrivateScope, Public, Static, HideBySig
+Class SharpDX.DXGI.VirtualSurfaceUpdatesCallbackNativeShadow+VirtualSurfaceUpdatesCallbackNativeVtbl: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :SharpDX.ComObjectShadow+ComObjectVtbl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

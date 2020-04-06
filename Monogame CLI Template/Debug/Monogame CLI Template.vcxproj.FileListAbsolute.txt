@@ -1,0 +1,2 @@
+C:\Users\Athanatos\source\repos\Monogame CLI Template\Monogame CLI Template\Debug\Monogame CLI Template.vcxprojAssemblyReference.cache
+C:\Users\Athanatos\source\repos\Monogame CLI Template\Monogame CLI Template\Debug\Monogame CLI Template.vcxproj.CopyComplete

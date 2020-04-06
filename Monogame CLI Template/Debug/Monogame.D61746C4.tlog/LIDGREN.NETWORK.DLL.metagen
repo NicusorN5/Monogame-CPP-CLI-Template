@@ -1,0 +1,707 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Lidgren.Network, Version=3.7.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Lidgren.Network.NetEncryption: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(Lidgren.Network.NetPeer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetKey(String): PrivateScope, Public, HideBySig
+    SetKey(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Encrypt(NetOutgoingMessage): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Decrypt(NetIncomingMessage): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class Lidgren.Network.NetCryptoProviderBase: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :Lidgren.Network.NetEncryption
+    Void .ctor(Lidgren.Network.NetPeer, System.Security.Cryptography.SymmetricAlgorithm): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetKey(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Encrypt(NetOutgoingMessage): PrivateScope, Public, Virtual, HideBySig
+    Decrypt(NetIncomingMessage): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetAESEncryption: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetCryptoProviderBase
+    Void .ctor(Lidgren.Network.NetPeer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, Byte[], Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Lidgren.Network.NetDESEncryption: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetCryptoProviderBase
+    Void .ctor(Lidgren.Network.NetPeer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, Byte[], Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Lidgren.Network.NetBlockEncryptionBase: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :Lidgren.Network.NetEncryption
+    Void .ctor(Lidgren.Network.NetPeer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 BlockSize 'get ' : 
+  Methods:
+    get_BlockSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Encrypt(NetOutgoingMessage): PrivateScope, Public, Virtual, HideBySig
+    Decrypt(NetIncomingMessage): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetRC2Encryption: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetCryptoProviderBase
+    Void .ctor(Lidgren.Network.NetPeer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, Byte[], Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Lidgren.Network.NetTripleDESEncryption: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetCryptoProviderBase
+    Void .ctor(Lidgren.Network.NetPeer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, Byte[], Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Lidgren.Network.NetXorEncryption: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetEncryption
+    Void .ctor(Lidgren.Network.NetPeer, Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetKey(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Encrypt(NetOutgoingMessage): PrivateScope, Public, Virtual, HideBySig
+    Decrypt(NetIncomingMessage): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetXtea: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Lidgren.Network.NetBlockEncryptionBase
+    Void .ctor(Lidgren.Network.NetPeer, Byte[], Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Lidgren.Network.NetPeer, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 BlockSize 'get ' : 
+  Methods:
+    get_BlockSize(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    SetKey(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetBitVector: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Capacity 'get ' : 
+    Boolean Bit [Int32] 'get set' : 
+  Methods:
+    get_Capacity(): PrivateScope, Public, HideBySig, SpecialName
+    IsEmpty(): PrivateScope, Public, HideBySig
+    Count(): PrivateScope, Public, HideBySig
+    RotateDown(): PrivateScope, Public, HideBySig
+    GetFirstSetIndex(): PrivateScope, Public, HideBySig
+    Get(Int32): PrivateScope, Public, HideBySig
+    Set(Int32, Boolean): PrivateScope, Public, HideBySig
+    get_Bit(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Bit(Int32, Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Clear(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetBitWriter: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    ReadByte(Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    ReadBytes(Byte[], Int32, Int32, Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    WriteByte(Byte, Int32, Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    WriteBytes(Byte[], Int32, Int32, Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    ReadUInt16(Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    ReadUInt32(Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    WriteUInt16(UInt16, Int32, Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    WriteUInt32(UInt32, Int32, Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    WriteUInt64(UInt64, Int32, Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    WriteVariableUInt32(Byte[], Int32, UInt32): PrivateScope, Public, Static, HideBySig
+    ReadVariableUInt32(Byte[], Int32&): PrivateScope, Public, Static, HideBySig
+Class Lidgren.Network.NetBuffer: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Data 'get set' : 
+    Int32 LengthBytes 'get set' : 
+    Int32 LengthBits 'get set' : 
+    Int64 Position 'get set' : 
+    Int32 PositionInBytes 'get ' : 
+  Methods:
+    WriteAt(Int32, UInt16): PrivateScope, Public, HideBySig
+    Write(UInt16, Int32): PrivateScope, Public, HideBySig
+    Write(Int16): PrivateScope, Public, HideBySig
+    WriteAt(Int32, Int16): PrivateScope, Public, HideBySig
+    Write(Int32): PrivateScope, Public, HideBySig
+    WriteAt(Int32, Int32): PrivateScope, Public, HideBySig
+    Write(UInt32): PrivateScope, Public, HideBySig
+    WriteAt(Int32, UInt32): PrivateScope, Public, HideBySig
+    Write(UInt32, Int32): PrivateScope, Public, HideBySig
+    Write(Int32, Int32): PrivateScope, Public, HideBySig
+    Write(UInt64): PrivateScope, Public, HideBySig
+    WriteAt(Int32, UInt64): PrivateScope, Public, HideBySig
+    Write(UInt64, Int32): PrivateScope, Public, HideBySig
+    Write(Int64): PrivateScope, Public, HideBySig
+    Write(Int64, Int32): PrivateScope, Public, HideBySig
+    Write(Single): PrivateScope, Public, HideBySig
+    Write(Double): PrivateScope, Public, HideBySig
+    WriteVariableUInt32(UInt32): PrivateScope, Public, HideBySig
+    WriteVariableInt32(Int32): PrivateScope, Public, HideBySig
+    WriteVariableInt64(Int64): PrivateScope, Public, HideBySig
+    WriteVariableUInt64(UInt64): PrivateScope, Public, HideBySig
+    WriteSignedSingle(Single, Int32): PrivateScope, Public, HideBySig
+    WriteUnitSingle(Single, Int32): PrivateScope, Public, HideBySig
+    WriteRangedSingle(Single, Single, Single, Int32): PrivateScope, Public, HideBySig
+    WriteRangedInteger(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Write(String): PrivateScope, Public, HideBySig
+    Write(IPEndPoint): PrivateScope, Public, HideBySig
+    WriteTime(Boolean): PrivateScope, Public, HideBySig
+    WriteTime(Double, Boolean): PrivateScope, Public, HideBySig
+    WritePadBits(): PrivateScope, Public, HideBySig
+    WritePadBits(Int32): PrivateScope, Public, HideBySig
+    Write(NetBuffer): PrivateScope, Public, HideBySig
+    WriteAllFields(Object): PrivateScope, Public, HideBySig
+    WriteAllFields(Object, BindingFlags): PrivateScope, Public, HideBySig
+    WriteAllProperties(Object): PrivateScope, Public, HideBySig
+    WriteAllProperties(Object, BindingFlags): PrivateScope, Public, HideBySig
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    set_Data(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_LengthBytes(): PrivateScope, Public, HideBySig, SpecialName
+    set_LengthBytes(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_LengthBits(): PrivateScope, Public, HideBySig, SpecialName
+    set_LengthBits(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_PositionInBytes(): PrivateScope, Public, HideBySig, SpecialName
+    PeekDataBuffer(): PrivateScope, Public, HideBySig
+    PeekBoolean(): PrivateScope, Public, HideBySig
+    PeekByte(): PrivateScope, Public, HideBySig
+    PeekSByte(): PrivateScope, Public, HideBySig
+    PeekByte(Int32): PrivateScope, Public, HideBySig
+    PeekBytes(Int32): PrivateScope, Public, HideBySig
+    PeekBytes(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    PeekInt16(): PrivateScope, Public, HideBySig
+    PeekUInt16(): PrivateScope, Public, HideBySig
+    PeekInt32(): PrivateScope, Public, HideBySig
+    PeekInt32(Int32): PrivateScope, Public, HideBySig
+    PeekUInt32(): PrivateScope, Public, HideBySig
+    PeekUInt32(Int32): PrivateScope, Public, HideBySig
+    PeekUInt64(): PrivateScope, Public, HideBySig
+    PeekInt64(): PrivateScope, Public, HideBySig
+    PeekUInt64(Int32): PrivateScope, Public, HideBySig
+    PeekInt64(Int32): PrivateScope, Public, HideBySig
+    PeekFloat(): PrivateScope, Public, HideBySig
+    PeekSingle(): PrivateScope, Public, HideBySig
+    PeekDouble(): PrivateScope, Public, HideBySig
+    PeekString(): PrivateScope, Public, HideBySig
+    ReadBoolean(): PrivateScope, Public, HideBySig
+    ReadByte(): PrivateScope, Public, HideBySig
+    ReadByte(Byte&(Out)): PrivateScope, Public, HideBySig
+    ReadSByte(): PrivateScope, Public, HideBySig
+    ReadByte(Int32): PrivateScope, Public, HideBySig
+    ReadBytes(Int32): PrivateScope, Public, HideBySig
+    ReadBytes(Int32, Byte[]&(Out)): PrivateScope, Public, HideBySig
+    ReadBytes(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    ReadBits(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    ReadInt16(): PrivateScope, Public, HideBySig
+    ReadUInt16(): PrivateScope, Public, HideBySig
+    ReadInt32(): PrivateScope, Public, HideBySig
+    ReadInt32(Int32&(Out)): PrivateScope, Public, HideBySig
+    ReadInt32(Int32): PrivateScope, Public, HideBySig
+    ReadUInt32(): PrivateScope, Public, HideBySig
+    ReadUInt32(UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadUInt32(Int32): PrivateScope, Public, HideBySig
+    ReadUInt64(): PrivateScope, Public, HideBySig
+    ReadInt64(): PrivateScope, Public, HideBySig
+    ReadUInt64(Int32): PrivateScope, Public, HideBySig
+    ReadInt64(Int32): PrivateScope, Public, HideBySig
+    ReadFloat(): PrivateScope, Public, HideBySig
+    ReadSingle(): PrivateScope, Public, HideBySig
+    ReadSingle(Single&(Out)): PrivateScope, Public, HideBySig
+    ReadDouble(): PrivateScope, Public, HideBySig
+    ReadVariableUInt32(): PrivateScope, Public, HideBySig
+    ReadVariableUInt32(UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadVariableInt32(): PrivateScope, Public, HideBySig
+    ReadVariableInt64(): PrivateScope, Public, HideBySig
+    ReadVariableUInt64(): PrivateScope, Public, HideBySig
+    ReadSignedSingle(Int32): PrivateScope, Public, HideBySig
+    ReadUnitSingle(Int32): PrivateScope, Public, HideBySig
+    ReadRangedSingle(Single, Single, Int32): PrivateScope, Public, HideBySig
+    ReadRangedInteger(Int32, Int32): PrivateScope, Public, HideBySig
+    ReadString(): PrivateScope, Public, HideBySig
+    ReadString(String&(Out)): PrivateScope, Public, HideBySig
+    ReadTime(NetConnection, Boolean): PrivateScope, Public, HideBySig
+    ReadIPEndPoint(): PrivateScope, Public, HideBySig
+    SkipPadBits(): PrivateScope, Public, HideBySig
+    ReadPadBits(): PrivateScope, Public, HideBySig
+    SkipPadBits(Int32): PrivateScope, Public, HideBySig
+    ReadAllFields(Object): PrivateScope, Public, HideBySig
+    ReadAllFields(Object, BindingFlags): PrivateScope, Public, HideBySig
+    ReadAllProperties(Object): PrivateScope, Public, HideBySig
+    ReadAllProperties(Object, BindingFlags): PrivateScope, Public, HideBySig
+    EnsureBufferSize(Int32): PrivateScope, Public, HideBySig
+    Write(Boolean): PrivateScope, Public, HideBySig
+    Write(Byte): PrivateScope, Public, HideBySig
+    Write(SByte): PrivateScope, Public, HideBySig
+    Write(Byte, Int32): PrivateScope, Public, HideBySig
+    Write(Byte[]): PrivateScope, Public, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    Write(UInt16): PrivateScope, Public, HideBySig
+Struct Lidgren.Network.SingleUIntUnion: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Single SingleValue : Public
+    UInt32 UIntValue : Public
+Class Lidgren.Network.NetPeer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Lidgren.Network.NetPeerConfiguration): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Lidgren.Network.NetPeerStatus Status 'get ' : 
+    System.Threading.AutoResetEvent MessageReceivedEvent 'get ' : 
+    Int64 UniqueIdentifier 'get ' : 
+    Int32 Port 'get ' : 
+    Lidgren.Network.NetUPnP UPnP 'get ' : 
+    System.Object Tag 'get set' : 
+    System.Collections.Generic.List`1[Lidgren.Network.NetConnection] Connections 'get ' : 
+    Int32 ConnectionsCount 'get ' : 
+    Lidgren.Network.NetPeerStatistics Statistics 'get ' : 
+    Lidgren.Network.NetPeerConfiguration Configuration 'get ' : 
+    System.Net.Sockets.Socket Socket 'get ' : 
+  Methods:
+    Introduce(IPEndPoint, IPEndPoint, IPEndPoint, IPEndPoint, String): PrivateScope, Public, HideBySig
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    get_MessageReceivedEvent(): PrivateScope, Public, HideBySig, SpecialName
+    get_UniqueIdentifier(): PrivateScope, Public, HideBySig, SpecialName
+    get_Port(): PrivateScope, Public, HideBySig, SpecialName
+    get_UPnP(): PrivateScope, Public, HideBySig, SpecialName
+    get_Tag(): PrivateScope, Public, HideBySig, SpecialName
+    set_Tag(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_Connections(): PrivateScope, Public, HideBySig, SpecialName
+    get_ConnectionsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Statistics(): PrivateScope, Public, HideBySig, SpecialName
+    get_Configuration(): PrivateScope, Public, HideBySig, SpecialName
+    Start(): PrivateScope, Public, HideBySig
+    GetConnection(IPEndPoint): PrivateScope, Public, HideBySig
+    WaitMessage(Int32): PrivateScope, Public, HideBySig
+    ReadMessage(): PrivateScope, Public, HideBySig
+    ReadMessages(IList`1): PrivateScope, Public, HideBySig
+    Connect(String, Int32): PrivateScope, Public, HideBySig
+    Connect(String, Int32, NetOutgoingMessage): PrivateScope, Public, HideBySig
+    Connect(IPEndPoint): PrivateScope, Public, HideBySig
+    Connect(IPEndPoint, NetOutgoingMessage): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    RawSend(Byte[], Int32, Int32, IPEndPoint): PrivateScope, Public, HideBySig
+    Shutdown(String): PrivateScope, Public, HideBySig
+    DiscoverLocalPeers(Int32): PrivateScope, Public, HideBySig
+    DiscoverKnownPeer(String, Int32): PrivateScope, Public, HideBySig
+    DiscoverKnownPeer(IPEndPoint): PrivateScope, Public, HideBySig
+    SendDiscoveryResponse(NetOutgoingMessage, IPEndPoint): PrivateScope, Public, HideBySig
+    get_Socket(): PrivateScope, Public, HideBySig, SpecialName
+    RegisterReceivedCallback(SendOrPostCallback, SynchronizationContext(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    UnregisterReceivedCallback(SendOrPostCallback): PrivateScope, Public, HideBySig
+    FlushSendQueue(): PrivateScope, Public, HideBySig
+    CreateMessage(): PrivateScope, Public, HideBySig
+    CreateMessage(String): PrivateScope, Public, HideBySig
+    CreateMessage(Int32): PrivateScope, Public, HideBySig
+    Recycle(NetIncomingMessage): PrivateScope, Public, HideBySig
+    Recycle(IEnumerable`1): PrivateScope, Public, HideBySig
+    SendMessage(NetOutgoingMessage, NetConnection, NetDeliveryMethod): PrivateScope, Public, HideBySig
+    SendMessage(NetOutgoingMessage, NetConnection, NetDeliveryMethod, Int32): PrivateScope, Public, HideBySig
+    SendMessage(NetOutgoingMessage, List`1, NetDeliveryMethod, Int32): PrivateScope, Public, HideBySig
+    SendUnconnectedMessage(NetOutgoingMessage, String, Int32): PrivateScope, Public, HideBySig
+    SendUnconnectedMessage(NetOutgoingMessage, IPEndPoint): PrivateScope, Public, HideBySig
+    SendUnconnectedMessage(NetOutgoingMessage, IList`1): PrivateScope, Public, HideBySig
+    SendUnconnectedToSelf(NetOutgoingMessage): PrivateScope, Public, HideBySig
+Class Lidgren.Network.NetClient: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetPeer
+    Void .ctor(Lidgren.Network.NetPeerConfiguration): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Lidgren.Network.NetConnection ServerConnection 'get ' : 
+    Lidgren.Network.NetConnectionStatus ConnectionStatus 'get ' : 
+  Methods:
+    get_ServerConnection(): PrivateScope, Public, HideBySig, SpecialName
+    get_ConnectionStatus(): PrivateScope, Public, HideBySig, SpecialName
+    Connect(IPEndPoint, NetOutgoingMessage): PrivateScope, Public, Virtual, HideBySig
+    Disconnect(String): PrivateScope, Public, HideBySig
+    SendMessage(NetOutgoingMessage, NetDeliveryMethod): PrivateScope, Public, HideBySig
+    SendMessage(NetOutgoingMessage, NetDeliveryMethod, Int32): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetConnection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.Object Tag 'get set' : 
+    Lidgren.Network.NetPeer Peer 'get ' : 
+    Lidgren.Network.NetConnectionStatus Status 'get ' : 
+    Lidgren.Network.NetConnectionStatistics Statistics 'get ' : 
+    System.Net.IPEndPoint RemoteEndPoint 'get ' : 
+    Int64 RemoteUniqueIdentifier 'get ' : 
+    Lidgren.Network.NetOutgoingMessage LocalHailMessage 'get ' : 
+    Lidgren.Network.NetIncomingMessage RemoteHailMessage 'get ' : 
+    Single AverageRoundtripTime 'get ' : 
+    Single RemoteTimeOffset 'get ' : 
+    Int32 CurrentMTU 'get ' : 
+  Methods:
+    get_Tag(): PrivateScope, Public, HideBySig, SpecialName
+    set_Tag(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_Peer(): PrivateScope, Public, HideBySig, SpecialName
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    get_Statistics(): PrivateScope, Public, HideBySig, SpecialName
+    get_RemoteEndPoint(): PrivateScope, Public, HideBySig, SpecialName
+    get_RemoteUniqueIdentifier(): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalHailMessage(): PrivateScope, Public, HideBySig, SpecialName
+    SendMessage(NetOutgoingMessage, NetDeliveryMethod, Int32): PrivateScope, Public, HideBySig
+    GetSendQueueInfo(NetDeliveryMethod, Int32, Int32&(Out), Int32&(Out)): PrivateScope, Public, HideBySig
+    CanSendImmediately(NetDeliveryMethod, Int32): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_RemoteHailMessage(): PrivateScope, Public, HideBySig, SpecialName
+    Approve(): PrivateScope, Public, HideBySig
+    Approve(NetOutgoingMessage): PrivateScope, Public, HideBySig
+    Deny(): PrivateScope, Public, HideBySig
+    Deny(String): PrivateScope, Public, HideBySig
+    Disconnect(String): PrivateScope, Public, HideBySig
+    get_AverageRoundtripTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_RemoteTimeOffset(): PrivateScope, Public, HideBySig, SpecialName
+    GetLocalTime(Double): PrivateScope, Public, HideBySig
+    GetRemoteTime(Double): PrivateScope, Public, HideBySig
+    get_CurrentMTU(): PrivateScope, Public, HideBySig, SpecialName
+Class Lidgren.Network.NetConnectionStatistics: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Properties:
+    Int32 SentPackets 'get ' : 
+    Int32 ReceivedPackets 'get ' : 
+    Int32 SentBytes 'get ' : 
+    Int32 ReceivedBytes 'get ' : 
+    Int32 ResentMessages 'get ' : 
+  Methods:
+    get_SentPackets(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceivedPackets(): PrivateScope, Public, HideBySig, SpecialName
+    get_SentBytes(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceivedBytes(): PrivateScope, Public, HideBySig, SpecialName
+    get_ResentMessages(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct Lidgren.Network.NetConnectionStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Lidgren.Network.NetConnectionStatus None = 0 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetConnectionStatus InitiatedConnect = 1 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetConnectionStatus ReceivedInitiation = 2 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetConnectionStatus RespondedAwaitingApproval = 3 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetConnectionStatus RespondedConnect = 4 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetConnectionStatus Connected = 5 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetConnectionStatus Disconnecting = 6 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetConnectionStatus Disconnected = 7 : Public, Static, Literal, HasDefault
+Struct Lidgren.Network.NetDeliveryMethod: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    Lidgren.Network.NetDeliveryMethod Unknown = 0 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetDeliveryMethod Unreliable = 1 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetDeliveryMethod UnreliableSequenced = 2 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetDeliveryMethod ReliableUnordered = 34 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetDeliveryMethod ReliableSequenced = 35 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetDeliveryMethod ReliableOrdered = 67 : Public, Static, Literal, HasDefault
+Class Lidgren.Network.NetException: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Assert(Boolean, String): PrivateScope, Public, Static, HideBySig
+    Assert(Boolean): PrivateScope, Public, Static, HideBySig
+Class Lidgren.Network.NetIncomingMessage: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Lidgren.Network.NetBuffer
+  Properties:
+    Lidgren.Network.NetIncomingMessageType MessageType 'get ' : 
+    Lidgren.Network.NetDeliveryMethod DeliveryMethod 'get ' : 
+    Int32 SequenceChannel 'get ' : 
+    System.Net.IPEndPoint SenderEndPoint 'get ' : 
+    Lidgren.Network.NetConnection SenderConnection 'get ' : 
+    Double ReceiveTime 'get ' : 
+  Methods:
+    get_MessageType(): PrivateScope, Public, HideBySig, SpecialName
+    get_DeliveryMethod(): PrivateScope, Public, HideBySig, SpecialName
+    get_SequenceChannel(): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderEndPoint(): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderConnection(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceiveTime(): PrivateScope, Public, HideBySig, SpecialName
+    Decrypt(NetEncryption): PrivateScope, Public, HideBySig
+    ReadTime(Boolean): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct Lidgren.Network.NetIncomingMessageType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Lidgren.Network.NetIncomingMessageType Error = 0 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType StatusChanged = 1 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType UnconnectedData = 2 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType ConnectionApproval = 4 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType Data = 8 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType Receipt = 16 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType DiscoveryRequest = 32 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType DiscoveryResponse = 64 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType VerboseDebugMessage = 128 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType DebugMessage = 256 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType WarningMessage = 512 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType ErrorMessage = 1024 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType NatIntroductionSuccess = 2048 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetIncomingMessageType ConnectionLatencyUpdated = 4096 : Public, Static, Literal, HasDefault
+Class Lidgren.Network.NetOutgoingMessage: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Lidgren.Network.NetBuffer
+  Methods:
+    Encrypt(NetEncryption): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetPeerConfiguration: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 kDefaultMTU = 1408 : Public, Static, Literal, HasDefault
+  Properties:
+    System.String AppIdentifier 'get ' : 
+    Lidgren.Network.NetUnreliableSizeBehaviour UnreliableSizeBehaviour 'get set' : 
+    System.String NetworkThreadName 'get set' : 
+    Int32 MaximumConnections 'get set' : 
+    Int32 MaximumTransmissionUnit 'get set' : 
+    Int32 DefaultOutgoingMessageCapacity 'get set' : 
+    Single PingInterval 'get set' : 
+    Boolean UseMessageRecycling 'get set' : 
+    Single ConnectionTimeout 'get set' : 
+    Boolean EnableUPnP 'get set' : 
+    Boolean AutoFlushSendQueue 'get set' : 
+    System.Net.IPAddress LocalAddress 'get set' : 
+    System.Net.IPAddress BroadcastAddress 'get set' : 
+    Int32 Port 'get set' : 
+    Int32 ReceiveBufferSize 'get set' : 
+    Int32 SendBufferSize 'get set' : 
+    Boolean AcceptIncomingConnections 'get set' : 
+    Single ResendHandshakeInterval 'get set' : 
+    Int32 MaximumHandshakeAttempts 'get set' : 
+    Boolean AutoExpandMTU 'get set' : 
+    Single ExpandMTUFrequency 'get set' : 
+    Int32 ExpandMTUFailAttempts 'get set' : 
+  Methods:
+    get_AppIdentifier(): PrivateScope, Public, HideBySig, SpecialName
+    EnableMessageType(NetIncomingMessageType): PrivateScope, Public, HideBySig
+    DisableMessageType(NetIncomingMessageType): PrivateScope, Public, HideBySig
+    SetMessageTypeEnabled(NetIncomingMessageType, Boolean): PrivateScope, Public, HideBySig
+    IsMessageTypeEnabled(NetIncomingMessageType): PrivateScope, Public, HideBySig
+    get_UnreliableSizeBehaviour(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnreliableSizeBehaviour(NetUnreliableSizeBehaviour): PrivateScope, Public, HideBySig, SpecialName
+    get_NetworkThreadName(): PrivateScope, Public, HideBySig, SpecialName
+    set_NetworkThreadName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumConnections(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumConnections(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumTransmissionUnit(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumTransmissionUnit(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultOutgoingMessageCapacity(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultOutgoingMessageCapacity(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PingInterval(): PrivateScope, Public, HideBySig, SpecialName
+    set_PingInterval(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_UseMessageRecycling(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseMessageRecycling(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ConnectionTimeout(): PrivateScope, Public, HideBySig, SpecialName
+    set_ConnectionTimeout(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_EnableUPnP(): PrivateScope, Public, HideBySig, SpecialName
+    set_EnableUPnP(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AutoFlushSendQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_AutoFlushSendQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_LocalAddress(IPAddress): PrivateScope, Public, HideBySig, SpecialName
+    get_BroadcastAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_BroadcastAddress(IPAddress): PrivateScope, Public, HideBySig, SpecialName
+    get_Port(): PrivateScope, Public, HideBySig, SpecialName
+    set_Port(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceiveBufferSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReceiveBufferSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SendBufferSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_SendBufferSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_AcceptIncomingConnections(): PrivateScope, Public, HideBySig, SpecialName
+    set_AcceptIncomingConnections(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ResendHandshakeInterval(): PrivateScope, Public, HideBySig, SpecialName
+    set_ResendHandshakeInterval(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumHandshakeAttempts(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumHandshakeAttempts(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_AutoExpandMTU(): PrivateScope, Public, HideBySig, SpecialName
+    set_AutoExpandMTU(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ExpandMTUFrequency(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandMTUFrequency(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_ExpandMTUFailAttempts(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandMTUFailAttempts(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Clone(): PrivateScope, Public, HideBySig
+Struct Lidgren.Network.NetUnreliableSizeBehaviour: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Lidgren.Network.NetUnreliableSizeBehaviour IgnoreMTU = 0 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetUnreliableSizeBehaviour NormalFragmentation = 1 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetUnreliableSizeBehaviour DropAboveMTU = 2 : Public, Static, Literal, HasDefault
+Class Lidgren.Network.NetPeerStatistics: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Properties:
+    Int32 SentPackets 'get ' : 
+    Int32 ReceivedPackets 'get ' : 
+    Int32 SentMessages 'get ' : 
+    Int32 ReceivedMessages 'get ' : 
+    Int32 SentBytes 'get ' : 
+    Int32 ReceivedBytes 'get ' : 
+    Int64 StorageBytesAllocated 'get ' : 
+    Int32 BytesInRecyclePool 'get ' : 
+  Methods:
+    get_SentPackets(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceivedPackets(): PrivateScope, Public, HideBySig, SpecialName
+    get_SentMessages(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceivedMessages(): PrivateScope, Public, HideBySig, SpecialName
+    get_SentBytes(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceivedBytes(): PrivateScope, Public, HideBySig, SpecialName
+    get_StorageBytesAllocated(): PrivateScope, Public, HideBySig, SpecialName
+    get_BytesInRecyclePool(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct Lidgren.Network.NetPeerStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Lidgren.Network.NetPeerStatus NotRunning = 0 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetPeerStatus Starting = 1 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetPeerStatus Running = 2 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetPeerStatus ShutdownRequested = 3 : Public, Static, Literal, HasDefault
+Class Lidgren.Network.NetQueue`1[T]: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Type parameter: T
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Count 'get ' : 
+    Int32 Capacity 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_Capacity(): PrivateScope, Public, HideBySig, SpecialName
+    Enqueue(T): PrivateScope, Public, HideBySig
+    Enqueue(IEnumerable`1): PrivateScope, Public, HideBySig
+    EnqueueFirst(T): PrivateScope, Public, HideBySig
+    TryDequeue(T&(Out)): PrivateScope, Public, HideBySig
+    TryDrain(IList`1): PrivateScope, Public, HideBySig
+    TryPeek(Int32): PrivateScope, Public, HideBySig
+    Contains(T): PrivateScope, Public, HideBySig
+    ToArray(): PrivateScope, Public, HideBySig
+    Clear(): PrivateScope, Public, HideBySig
+Class Lidgren.Network.NetRandom: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :System.Random
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Lidgren.Network.NetRandom Instance : Public, Static
+  Methods:
+    Initialize(UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    NextUInt32(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Next(): PrivateScope, Public, Virtual, HideBySig
+    NextInt32(): PrivateScope, Public, HideBySig
+    NextDouble(): PrivateScope, Public, Virtual, HideBySig
+    NextSingle(): PrivateScope, Public, HideBySig
+    Next(Int32): PrivateScope, Public, Virtual, HideBySig
+    Next(Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    NextUInt64(): PrivateScope, Public, HideBySig
+    NextBool(): PrivateScope, Public, HideBySig
+    NextBytes(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    NextBytes(Byte[]): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.MWCRandom: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetRandom
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Lidgren.Network.MWCRandom Instance : Public, Static, InitOnly
+  Methods:
+    Initialize(UInt32): PrivateScope, Public, Virtual, HideBySig
+    Initialize(UInt64): PrivateScope, Public, HideBySig
+    NextUInt32(): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.XorShiftRandom: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Lidgren.Network.NetRandom
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Lidgren.Network.XorShiftRandom Instance : Public, Static, InitOnly
+  Methods:
+    Initialize(UInt32): PrivateScope, Public, Virtual, HideBySig
+    Initialize(UInt64): PrivateScope, Public, HideBySig
+    NextUInt32(): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.MersenneTwisterRandom: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Lidgren.Network.NetRandom
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Lidgren.Network.MersenneTwisterRandom Instance : Public, Static, InitOnly
+  Methods:
+    Initialize(UInt32): PrivateScope, Public, Virtual, HideBySig
+    NextUInt32(): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.CryptoRandom: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetRandom
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Lidgren.Network.CryptoRandom Instance : Public, Static, InitOnly
+  Methods:
+    Initialize(UInt32): PrivateScope, Public, Virtual, HideBySig
+    NextUInt32(): PrivateScope, Public, Virtual, HideBySig
+    NextBytes(Byte[]): PrivateScope, Public, Virtual, HideBySig
+    NextBytes(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetRandomSeed: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetUInt32(): PrivateScope, Public, Static, HideBySig
+    GetUInt64(): PrivateScope, Public, Static, HideBySig
+Struct Lidgren.Network.NetSendResult: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Lidgren.Network.NetSendResult FailedNotConnected = 0 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetSendResult Sent = 1 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetSendResult Queued = 2 : Public, Static, Literal, HasDefault
+    Lidgren.Network.NetSendResult Dropped = 3 : Public, Static, Literal, HasDefault
+Class Lidgren.Network.NetServer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Lidgren.Network.NetPeer
+    Void .ctor(Lidgren.Network.NetPeerConfiguration): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SendToAll(NetOutgoingMessage, NetDeliveryMethod): PrivateScope, Public, HideBySig
+    SendToAll(NetOutgoingMessage, NetConnection, NetDeliveryMethod, Int32): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Lidgren.Network.NetSRP: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    CreateRandomSalt(): PrivateScope, Public, Static, HideBySig
+    CreateRandomEphemeral(): PrivateScope, Public, Static, HideBySig
+    ComputePrivateKey(String, String, Byte[]): PrivateScope, Public, Static, HideBySig
+    ComputeServerVerifier(Byte[]): PrivateScope, Public, Static, HideBySig
+    Hash(Byte[]): PrivateScope, Public, Static, HideBySig
+    ComputeClientEphemeral(Byte[]): PrivateScope, Public, Static, HideBySig
+    ComputeServerEphemeral(Byte[], Byte[]): PrivateScope, Public, Static, HideBySig
+    ComputeU(Byte[], Byte[]): PrivateScope, Public, Static, HideBySig
+    ComputeServerSessionValue(Byte[], Byte[], Byte[], Byte[]): PrivateScope, Public, Static, HideBySig
+    ComputeClientSessionValue(Byte[], Byte[], Byte[], Byte[]): PrivateScope, Public, Static, HideBySig
+    CreateEncryption(NetPeer, Byte[]): PrivateScope, Public, Static, HideBySig
+Class Lidgren.Network.NetTime: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Properties:
+    Double Now 'get ' : 
+  Methods:
+    get_Now(): PrivateScope, Public, Static, HideBySig, SpecialName
+    ToReadable(Double): PrivateScope, Public, Static, HideBySig
+Struct Lidgren.Network.UPnPStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Lidgren.Network.UPnPStatus Discovering = 0 : Public, Static, Literal, HasDefault
+    Lidgren.Network.UPnPStatus NotAvailable = 1 : Public, Static, Literal, HasDefault
+    Lidgren.Network.UPnPStatus Available = 2 : Public, Static, Literal, HasDefault
+Class Lidgren.Network.NetUPnP: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Lidgren.Network.NetPeer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Lidgren.Network.UPnPStatus Status 'get ' : 
+  Methods:
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    ForwardPort(Int32, String): PrivateScope, Public, HideBySig
+    DeleteForwardingRule(Int32): PrivateScope, Public, HideBySig
+    GetExternalIP(): PrivateScope, Public, HideBySig
+Class Lidgren.Network.NetUtility: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    ResolveAsync(String, Int32, ResolveEndPointCallback): PrivateScope, Public, Static, HideBySig
+    Resolve(String, Int32): PrivateScope, Public, Static, HideBySig
+    ResolveAsync(String, ResolveAddressCallback): PrivateScope, Public, Static, HideBySig
+    Resolve(String): PrivateScope, Public, Static, HideBySig
+    GetMacAddress(): PrivateScope, Public, Static, HideBySig
+    ToHexString(Int64): PrivateScope, Public, Static, HideBySig
+    ToHexString(Byte[]): PrivateScope, Public, Static, HideBySig
+    ToHexString(Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetBroadcastAddress(): PrivateScope, Public, Static, HideBySig
+    GetMyAddress(IPAddress&(Out)): PrivateScope, Public, Static, HideBySig
+    IsLocal(IPEndPoint): PrivateScope, Public, Static, HideBySig
+    IsLocal(IPAddress): PrivateScope, Public, Static, HideBySig
+    BitsToHoldUInt(UInt32): PrivateScope, Public, Static, HideBySig
+    BytesToHoldBits(Int32): PrivateScope, Public, Static, HideBySig
+    ToByteArray(String): PrivateScope, Public, Static, HideBySig
+    ToHumanReadable(Int64): PrivateScope, Public, Static, HideBySig
+    GetWindowSize(NetDeliveryMethod): PrivateScope, Public, Static, HideBySig
+    MakeCommaDelimitedList(IList`1): PrivateScope, Public, Static, HideBySig
+    CreateSHA1Hash(String): PrivateScope, Public, Static, HideBySig
+    CreateSHA1Hash(Byte[]): PrivateScope, Public, Static, HideBySig
+    CreateSHA1Hash(Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+Class Lidgren.Network.NetUtility+ResolveEndPointCallback: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(IPEndPoint): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(IPEndPoint, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Lidgren.Network.NetUtility+ResolveAddressCallback: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(IPAddress): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(IPAddress, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask

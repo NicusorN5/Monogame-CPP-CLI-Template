@@ -1,0 +1,205 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly SharpDX.XInput, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly SharpDX, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1: 
+	hash=None, flags=None
+Class SharpDX.XInput.Controller: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(SharpDX.XInput.UserIndex): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    SharpDX.XInput.UserIndex UserIndex 'get ' : 
+    Boolean IsConnected 'get ' : 
+  Methods:
+    get_UserIndex(): PrivateScope, Public, HideBySig, SpecialName
+    GetBatteryInformation(BatteryDeviceType): PrivateScope, Public, HideBySig
+    GetCapabilities(DeviceQueryType): PrivateScope, Public, HideBySig
+    GetCapabilities(DeviceQueryType, Capabilities&(Out)): PrivateScope, Public, HideBySig
+    GetKeystroke(DeviceQueryType, Keystroke&(Out)): PrivateScope, Public, HideBySig
+    GetState(): PrivateScope, Public, HideBySig
+    GetState(State&(Out)): PrivateScope, Public, HideBySig
+    SetReporting(Boolean): PrivateScope, Public, Static, HideBySig
+    SetVibration(Vibration): PrivateScope, Public, HideBySig
+    get_IsConnected(): PrivateScope, Public, HideBySig, SpecialName
+Struct SharpDX.XInput.Gamepad: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.XInput.GamepadButtonFlags Buttons : Public
+    Byte LeftTrigger : Public
+    Byte RightTrigger : Public
+    Int16 LeftThumbX : Public
+    Int16 LeftThumbY : Public
+    Int16 RightThumbX : Public
+    Int16 RightThumbY : Public
+    Byte TriggerThreshold = 30 : Public, Static, Literal, HasDefault
+    Int16 LeftThumbDeadZone = 7849 : Public, Static, Literal, HasDefault
+    Int16 RightThumbDeadZone = 8689 : Public, Static, Literal, HasDefault
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct SharpDX.XInput.BatteryDeviceType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.BatteryDeviceType Gamepad = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryDeviceType Headset = 1 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.BatteryLevel: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.BatteryLevel Empty = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryLevel Low = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryLevel Medium = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryLevel Full = 3 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.BatteryType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.BatteryType Disconnected = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryType Wired = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryType Alkaline = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryType Nimh = 3 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.BatteryType Unknown = 255 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.CapabilityFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int16 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.CapabilityFlags VoiceSupported = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.CapabilityFlags FfbSupported = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.CapabilityFlags Wireless = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.CapabilityFlags PmdSupported = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.CapabilityFlags NoNavigation = 16 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.CapabilityFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.DeviceQueryType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.DeviceQueryType Gamepad = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceQueryType Any = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.DeviceSubType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.DeviceSubType Gamepad = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType Unknown = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType Wheel = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType ArcadeStick = 3 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType FlightStick = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType DancePad = 5 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType Guitar = 6 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType GuitarAlternate = 7 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType DrumKit = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType GuitarBass = 11 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.DeviceSubType ArcadePad = 19 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.DeviceType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.DeviceType Gamepad = 1 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.GamepadButtonFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int16 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.GamepadButtonFlags DPadUp = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags DPadDown = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags DPadLeft = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags DPadRight = 8 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags Start = 16 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags Back = 32 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags LeftThumb = 64 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags RightThumb = 128 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags LeftShoulder = 256 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags RightShoulder = 512 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags A = 4096 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags B = 8192 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags X = 16384 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags Y = -32768 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadButtonFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.GamepadKeyCode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int16 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.GamepadKeyCode A = 22528 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode B = 22529 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode X = 22530 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode Y = 22531 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightShoulder = 22532 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftShoulder = 22533 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftTrigger = 22534 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightTrigger = 22535 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode DPadUp = 22544 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode DPadDown = 22545 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode DPadLeft = 22546 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode DPadRight = 22547 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode Start = 22548 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode Back = 22549 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftThumbPress = 22550 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbPress = 22551 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftThumbUp = 22560 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftThumbDown = 22561 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftThumbRight = 22562 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftThumbLeft = 22563 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbUpLeft = 22564 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftThumbUpright = 22565 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode LeftThumbDownright = 22566 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbDownLeft = 22567 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbUp = 22576 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbDown = 22577 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbRight = 22578 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbLeft = 22579 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbUpleft = 22580 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbUpRight = 22581 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbDownRight = 22582 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode RightThumbDownleft = 22583 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.GamepadKeyCode None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.KeyStrokeFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int16 value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.KeyStrokeFlags KeyDown = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.KeyStrokeFlags KeyUp = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.KeyStrokeFlags Repeat = 4 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.KeyStrokeFlags None = 0 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.UserIndex: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    SharpDX.XInput.UserIndex Any = 255 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.UserIndex One = 0 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.UserIndex Two = 1 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.UserIndex Three = 2 : Public, Static, Literal, HasDefault
+    SharpDX.XInput.UserIndex Four = 3 : Public, Static, Literal, HasDefault
+Struct SharpDX.XInput.BatteryInformation: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.XInput.BatteryType BatteryType : Public
+    SharpDX.XInput.BatteryLevel BatteryLevel : Public
+Struct SharpDX.XInput.Capabilities: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.XInput.DeviceType Type : Public
+    SharpDX.XInput.DeviceSubType SubType : Public
+    SharpDX.XInput.CapabilityFlags Flags : Public
+    SharpDX.XInput.Gamepad Gamepad : Public
+    SharpDX.XInput.Vibration Vibration : Public
+Struct SharpDX.XInput.Keystroke: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    SharpDX.XInput.GamepadKeyCode VirtualKey : Public
+    Char Unicode : Public
+    SharpDX.XInput.KeyStrokeFlags Flags : Public
+    SharpDX.XInput.UserIndex UserIndex : Public
+    Byte HidCode : Public
+Struct SharpDX.XInput.State: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 PacketNumber : Public
+    SharpDX.XInput.Gamepad Gamepad : Public
+Struct SharpDX.XInput.Vibration: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt16 LeftMotorSpeed : Public
+    UInt16 RightMotorSpeed : Public
+Class SharpDX.XInput.ResultCode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SharpDX.Result NotConnected : Public, Static, InitOnly
